@@ -42,3 +42,230 @@ a {
   font-weight: bold;
   font-style: italic;
   font-display: swap; }
+
+@font-face {
+  font-family: 'Sandro-bold';
+  src: url("../fonts/Sandro-Bold.eot");
+  src: url("../fonts/Sandro-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/Sandro-Bold.woff2") format("woff2"), url("../fonts/Sandro-Bold.woff") format("woff"), url("../fonts/Sandro-Bold.ttf") format("truetype"), url("../fonts/Sandro-Bold.svg#Sandro-Bold") format("svg");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap; }
+
+@font-face {
+  font-family: 'Sandro-bold-italic';
+  src: url("../fonts/Sandro-BoldItalic.eot");
+  src: url("../fonts/Sandro-BoldItalic.eot?#iefix") format("embedded-opentype"), url("../fonts/Sandro-BoldItalic.woff2") format("woff2"), url("../fonts/Sandro-BoldItalic.woff") format("woff"), url("../fonts/Sandro-BoldItalic.ttf") format("truetype"), url("../fonts/Sandro-BoldItalic.svg#Sandro-BoldItalic") format("svg");
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap; }
+
+@font-face {
+  font-family: 'Sandro-regular';
+  src: url("../fonts/Sandro-Regular.eot");
+  src: url("../fonts/Sandro-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/Sandro-Regular.woff2") format("woff2"), url("../fonts/Sandro-Regular.woff") format("woff"), url("../fonts/Sandro-Regular.ttf") format("truetype"), url("../fonts/Sandro-Regular.svg#Sandro-Regular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap; }
+
+@font-face {
+  font-family: 'Sandro-regular-italic';
+  src: url("../fonts/Sandro-RegularItalic.eot");
+  src: url("../fonts/Sandro-RegularItalic.eot?#iefix") format("embedded-opentype"), url("../fonts/Sandro-RegularItalic.woff2") format("woff2"), url("../fonts/Sandro-RegularItalic.woff") format("woff"), url("../fonts/Sandro-RegularItalic.ttf") format("truetype"), url("../fonts/Sandro-RegularItalic.svg#Sandro-RegularItalic") format("svg");
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap; }
+
+header {
+  background: #EBEBEB;
+  height: 64px;
+  padding: 7px 38px;
+  display: flex;
+  justify-content: space-between; }
+  header .logo {
+    position: relative;
+    min-height: 120px; }
+    header .logo span {
+      position: absolute;
+      font-family: "BPG Nino Mtavruli";
+      color: #527178;
+      font-size: 22px;
+      bottom: 0px;
+      left: 64px;
+      width: 247px; }
+  header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: unset; }
+    header nav ul {
+      display: flex;
+      justify-content: space-between; }
+      header nav ul li {
+        font-family: "Sandro-bold";
+        font-size: 34px;
+        padding: 0px 30px;
+        border-right: 1px solid #527178;
+        height: 32px; }
+        header nav ul li a {
+          color: #527178; }
+        header nav ul li:last-child {
+          border: none;
+          min-width: fit-content; }
+    header nav img {
+      margin-left: 70px; }
+
+.home-first-section {
+  background: #EBEBEB;
+  margin-top: 60px;
+  padding: 0 3% 3% 3%; }
+  .home-first-section p {
+    font-family: "Sandro-regular";
+    font-size: 28px;
+    color: black;
+    font-size: 28px;
+    padding-top: 1%;
+    line-height: 32px; }
+    .home-first-section p a {
+      font-family: "Sandro-bold";
+      font-size: 28px;
+      color: #0871B8; }
+    .home-first-section p span {
+      font-family: "Sandro-bold";
+      font-size: 28px;
+      color: #0871B8; }
+
+.about-project {
+  background: #EBEBEB;
+  margin-top: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: unset;
+  flex-direction: unset;
+  padding: 3% 9%; }
+  .about-project div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: white;
+    width: 100%;
+    max-width: 1280px; }
+    .about-project div p {
+      font-family: "BPG Nino Mtavruli";
+      font-size: 42px;
+      color: #527178;
+      padding: 8% 11%;
+      text-align: center; }
+    .about-project div img {
+      cursor: pointer; }
+
+.interactive-books {
+  background: #EBEBEB;
+  margin-top: 60px;
+  padding: 3%;
+  display: flex;
+  justify-content: space-around;
+  align-items: unset;
+  flex-direction: column; }
+  .interactive-books h3 {
+    font-family: "BPG Nino Mtavruli";
+    font-size: 22px;
+    color: #527178;
+    padding-bottom: 2%; }
+  .interactive-books .book-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: unset;
+    flex-direction: unset;
+    flex-wrap: wrap; }
+    .interactive-books .book-wrapper .book {
+      max-width: 255px;
+      max-height: 320px;
+      margin: 0 45px 50px 0; }
+      .interactive-books .book-wrapper .book h6 {
+        font-family: "Sandro-bold";
+        font-size: 24px;
+        color: #527178;
+        background: white;
+        padding: 17px 2px; }
+
+.about-main-section {
+  margin-top: 60px;
+  display: flex;
+  justify-content: space-between; }
+  .about-main-section .nav-side-bar {
+    padding: 3%; }
+    .about-main-section .nav-side-bar li {
+      margin-bottom: 20px; }
+      .about-main-section .nav-side-bar li a {
+        font-family: "Sandro-bold";
+        font-size: 34px;
+        color: #527178; }
+  .about-main-section .p-wrapper {
+    background: #EBEBEB;
+    padding: 48px; }
+    .about-main-section .p-wrapper h4 {
+      font-family: "BPG Nino Mtavruli";
+      font-size: 32px;
+      color: #527178;
+      margin-top: 3%;
+      position: relative; }
+      .about-main-section .p-wrapper h4::before {
+        content: "";
+        position: absolute;
+        width: 29px;
+        height: 32px;
+        background: white;
+        position: absolute;
+        top: -4px;
+        left: -48px; }
+    .about-main-section .p-wrapper p {
+      font-family: "Sandro-regular";
+      font-size: 22px;
+      color: #527178;
+      margin: 2% 0; }
+    .about-main-section .p-wrapper h5 {
+      font-family: "BPG Nino Mtavruli";
+      font-size: 22px;
+      color: #527178; }
+    .about-main-section .p-wrapper a {
+      font-family: "Sandro-bold";
+      font-size: 22px;
+      color: #0871B8; }
+    .about-main-section .p-wrapper ul {
+      list-style: unset;
+      margin-left: 22px; }
+      .about-main-section .p-wrapper ul li {
+        font-family: "Sandro-regular";
+        font-size: 22px;
+        color: #527178; }
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  background: #527178;
+  padding: 1%; }
+  footer .social-web {
+    display: flex; }
+    footer .social-web .facebook {
+      display: flex;
+      flex-direction: column; }
+      footer .social-web .facebook a {
+        margin: 0 10px 10px 10px;
+        font-family: "Sandro-bold";
+        font-size: 22px;
+        color: white; }
+  footer .links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: unset;
+    flex-wrap: wrap;
+    width: 400px; }
+    footer .links a:last-child img {
+      max-width: 290px;
+      width: 100%; }
+
+html {
+  scroll-behavior: smooth; }

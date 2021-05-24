@@ -1,0 +1,19 @@
+@mixin justify($arg){
+    display:flex;
+    justify-content: $arg;
+}
+@mixin d-flex($justify,$align,$direction){
+    display:flex;
+    justify-content: $justify;
+    align-items: $align;
+    flex-direction: $direction;
+}
+@mixin section($color,$mrg){
+    background: $background;
+    margin-top:60px;
+}
+@mixin font($family,$size,$color){
+    font-family: $family;
+    font-size: $size;
+    color: $color;
+}

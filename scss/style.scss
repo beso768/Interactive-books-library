@@ -2,4 +2,12 @@
 @import "./modules/variables.scss";
 @import "./modules/mixins.scss";
 @import "./base/fonts.scss";
-@import "main-styles.scss";
+@import "./main/header.scss";
+@import "./main/index.scss";
+@import "./main/library.scss";
+@import "./main/news.scss";
+@import "./main/about.scss";
+@import "./main/footer.scss";
+html{
+    scroll-behavior: smooth;
+}

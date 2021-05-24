@@ -1,0 +1,28 @@
+footer{
+    @include justify(space-between);
+    flex-wrap: wrap;
+    background: $background-dark;
+    padding: 1%;
+    .social-web{
+        display: flex;
+        .facebook{
+            display: flex;
+            flex-direction: column;
+            a{
+                margin: 0 10px 10px 10px;
+                @include font($bold,22px,white);
+            }
+        }
+    }
+    .links{
+        @include d-flex(space-between,center,unset);
+        flex-wrap: wrap;
+        width: 400px;
+        a{
+            &:last-child img{
+                max-width: 290px;
+                width: 100%;
+            }
+        }
+    }
+}

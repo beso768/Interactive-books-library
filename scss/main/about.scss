@@ -1,0 +1,49 @@
+.about-main-section{
+    margin-top: 60px;
+    @include justify(space-between);
+    .nav-side-bar {
+        padding: 3%;
+        li{
+            margin-bottom: 20px;
+            a{
+                @include font($bold,34px,$font-main-color);
+            }
+        }
+    }
+    .p-wrapper{
+        background: $background;
+        padding: 48px;
+        h4{
+            @include font($nino-mtavruli,32px,$font-main-color);
+            margin-top: 3%;
+            position: relative;
+            &::before{
+                content: "";
+                position: absolute;
+                width: 29px;
+                height: 32px;
+                background: white;
+                position: absolute;
+                top: -4px;
+                left: -48px;
+            }
+        }
+        p{
+            @include font($regular,22px,$font-main-color);
+            margin: 2% 0;
+        }
+        h5{
+            @include font($nino-mtavruli,22px,$font-main-color);
+        }
+        a{
+            @include font($bold,22px,$blue);
+        }
+        ul{
+            list-style: unset;
+            margin-left: 22px;
+            li{
+                @include font($regular,22px,$font-main-color);
+            }
+        }
+    }
+}

@@ -1,0 +1,58 @@
+.home-first-section{
+    @include section($background,60px);
+    padding: 0 3% 3% 3%;
+    p{
+        @include font($regular,28px,black);
+        font-size: 28px;
+        padding-top: 1%;
+        line-height: 32px;
+        a{
+            @include font($bold,28px,$blue);
+        }
+        span{
+            @include font($bold,28px,$blue);
+        }
+    }   
+}
+.about-project{
+    @include section($background,60px);
+    @include d-flex(center,unset,unset);
+    padding: 3% 9%;
+    div{
+        @include d-flex(center,center,column);
+        background: white;
+        width: 100%;
+        max-width: 1280px;
+        p{
+            @include font($nino-mtavruli,42px,$font-main-color);
+            padding: 8% 11%;
+            text-align: center;
+        }
+        img{
+            cursor: pointer;
+        }
+    }
+}
+.interactive-books{
+    @include section($background,60px);
+    padding: 3%;
+    @include d-flex(space-around,unset,column);
+    h3{
+        @include font($nino-mtavruli,22px,$font-main-color);
+        padding-bottom: 2%;
+    }
+    .book-wrapper{
+        @include d-flex(space-between,unset,unset);
+        flex-wrap: wrap;
+        .book{
+            max-width: 255px;
+            max-height: 320px;
+            margin: 0 45px 50px 0;
+            h6{
+                @include font($bold,24px,$font-main-color);
+                background: white;
+                padding: 17px 2px;
+            }
+        }
+    }
+}

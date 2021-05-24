@@ -1,0 +1,43 @@
+header{
+    background: $background;
+    height: 64px;
+    padding: 7px 38px;
+    @include  justify(space-between);
+    .logo{
+        position: relative;
+        min-height: 120px;
+      span{
+          position: absolute;
+          font-family: $nino-mtavruli;
+          color: $font-main-color;
+          font-size: 22px;
+          bottom: 0px;
+          left: 64px;
+          width: 247px;
+        }  
+    }
+    nav{
+        @include  d-flex(space-between,center,unset);
+        ul{
+            @include  justify(space-between);
+            li{
+                font-family: $bold;
+                font-size: 34px;
+                padding: 0px 30px;
+                border-right: 1px solid $font-main-color;
+                height: 32px;
+                a{
+                    color: $font-main-color; 
+                }
+                &:last-child{
+                    border:none;
+                    min-width: fit-content;
+                }
+            }
+        }
+        img{
+            margin-left: 70px;
+        }
+    }
+    
+}
