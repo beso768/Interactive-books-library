@@ -1,7 +1,7 @@
 footer{
     @include justify(space-between);
     flex-wrap: wrap;
-    background: $background-dark;
+    background: $font-main-color;
     padding: 1%;
     .social-web{
         display: flex;

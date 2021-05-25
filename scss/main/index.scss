@@ -56,3 +56,19 @@
         }
     }
 }
+#user-section{
+    @include d-flex(center,center,column);
+    height: 100vh;
+    @include font($bold,60px,$font-main-color);
+    a{
+        width: 37%;
+        height: 180px;
+        @include d-flex(center,center,unset);
+        background: $font-main-color;
+        color: white;
+        margin-bottom: 5%;
+    }
+    h1{
+        text-align: center;
+    }
+}

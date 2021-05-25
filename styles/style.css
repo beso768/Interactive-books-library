@@ -112,6 +112,7 @@ header {
           border: none;
           min-width: fit-content; }
     header nav img {
+      cursor: pointer;
       margin-left: 70px; }
 
 .home-first-section {
@@ -188,6 +189,28 @@ header {
         color: #527178;
         background: white;
         padding: 17px 2px; }
+
+#user-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  font-family: "Sandro-bold";
+  font-size: 60px;
+  color: #527178; }
+  #user-section a {
+    width: 37%;
+    height: 180px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: unset;
+    background: #527178;
+    color: white;
+    margin-bottom: 5%; }
+  #user-section h1 {
+    text-align: center; }
 
 .about-main-section {
   margin-top: 60px;
