@@ -121,7 +121,13 @@ header {
       height: 48px;
       right: 36px;
       top: 70px;
-      border: 1px solid #527178; }
+      border: 1px solid #527178;
+      font-family: "Sandro-bold";
+      font-size: 22px;
+      color: #527178;
+      outline: none; }
+      header nav #site-search::-webkit-search-cancel-button {
+        display: none; }
     header nav #search-button {
       border: none;
       background: none;
@@ -190,19 +196,21 @@ header {
   .interactive-books .book-wrapper {
     display: flex;
     justify-content: space-between;
-    align-items: unset;
-    flex-direction: unset;
     flex-wrap: wrap; }
     .interactive-books .book-wrapper .book {
+      position: relative;
+      display: flex;
+      flex-direction: column;
       max-width: 255px;
       max-height: 320px;
-      margin: 0 45px 50px 0; }
+      margin-bottom: 50px;
+      margin-right: 10px; }
       .interactive-books .book-wrapper .book h6 {
         font-family: "Sandro-bold";
         font-size: 24px;
         color: #527178;
         background: white;
-        padding: 17px 2px; }
+        padding: 17px 6px; }
 
 #user-section {
   display: flex;
@@ -225,6 +233,94 @@ header {
     margin-bottom: 5%; }
   #user-section h1 {
     text-align: center; }
+
+.library-main-section {
+  background: #EBEBEB;
+  margin-top: 60px;
+  padding: 2% 3.5%; }
+  .library-main-section .filter-section {
+    display: flex; }
+    .library-main-section .filter-section #select-filter {
+      background: #527178;
+      height: max-content;
+      font-family: "Sandro-bold";
+      font-size: 24px;
+      color: white;
+      padding: 5px;
+      border: none;
+      outline: none;
+      margin-right: 2%; }
+    .library-main-section .filter-section .tags {
+      display: flex;
+      flex-wrap: wrap;
+      font-family: "Sandro-bold";
+      font-size: 24px;
+      color: #527178; }
+      .library-main-section .filter-section .tags ul {
+        display: flex; }
+        .library-main-section .filter-section .tags ul li {
+          cursor: pointer; }
+  .library-main-section .divide {
+    display: flex;
+    align-items: baseline; }
+    .library-main-section .divide hr {
+      width: 100%;
+      height: 2px;
+      background-color: #527178;
+      border: none; }
+    .library-main-section .divide #table-icon {
+      cursor: pointer;
+      margin-left: 5px; }
+  .library-main-section .chatbots {
+    display: flex;
+    justify-content: unset;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 3%; }
+    .library-main-section .chatbots .book-wrapper {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap; }
+      .library-main-section .chatbots .book-wrapper .book {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        max-width: 255px;
+        max-height: 320px;
+        margin-bottom: 50px;
+        margin-right: 10px; }
+        .library-main-section .chatbots .book-wrapper .book h6 {
+          font-family: "Sandro-bold";
+          font-size: 24px;
+          color: #527178;
+          background: white;
+          padding: 17px 6px; }
+    .library-main-section .chatbots #sign {
+      position: absolute;
+      bottom: 68px;
+      right: 10px; }
+    .library-main-section .chatbots button {
+      background: #527178;
+      padding: 12px;
+      border: none;
+      cursor: pointer; }
+  .library-main-section .letters-filter {
+    display: none;
+    column-count: 4;
+    column-rule: 1px solid #707070;
+    column-gap: 8%;
+    padding-top: 3%; }
+    .library-main-section .letters-filter ul {
+      padding: 8px 0px; }
+      .library-main-section .letters-filter ul h4 {
+        font-family: "BPG Nino Mtavruli";
+        font-size: 24px;
+        color: #527178; }
+      .library-main-section .letters-filter ul li {
+        font-family: "Sandro-bold";
+        font-size: 24px;
+        color: #527178;
+        cursor: pointer; }
 
 .news-wrapper {
   background: #EBEBEB;

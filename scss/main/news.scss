@@ -3,7 +3,7 @@
     padding: 2% 3.5%;
     .tags{
         display: flex;
-        @include font($bold,24px,$font-main-color);
+        @include font($bold,24px,$primary);
         ul{
             display: flex;
             li{
@@ -14,10 +14,10 @@
     .news-first-section, .news-second-section{
         margin-top: 5%;
         h4{
-            @include font($nino-mtavruli,22px,$font-main-color);
+            @include font($nino-mtavruli,22px,$primary);
         }
         p{
-            @include font($regular,28px,$font-main-color);
+            @include font($regular,28px,$primary);
             margin: 2% 0;
         }
         .videos-section{
@@ -40,7 +40,7 @@
             max-width: 1280px;
             margin: auto;
             p{
-                @include font($nino-mtavruli,42px,$font-main-color);
+                @include font($nino-mtavruli,42px,$primary);
                 padding: 8% 11%;
                 text-align: center;
             }

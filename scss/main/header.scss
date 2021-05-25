@@ -10,7 +10,7 @@ header{
       span{
           position: absolute;
           font-family: $nino-mtavruli;
-          color: $font-main-color;
+          color: $primary;
           font-size: 22px;
           bottom: 0px;
           left: 64px;
@@ -25,10 +25,10 @@ header{
                 font-family: $bold;
                 font-size: 34px;
                 padding: 0px 30px;
-                border-right: 1px solid $font-main-color;
+                border-right: 1px solid $primary;
                 height: 32px;
                 a{
-                    color: $font-main-color; 
+                    color: $primary; 
                 }
                 &:last-child{
                     border:none;
@@ -46,7 +46,12 @@ header{
             height: 48px;
             right: 36px;
             top: 70px;
-            @include border(1px,solid,$font-main-color);
+            @include border(1px,solid,$primary);
+            @include font($bold,22px,$primary);
+            outline: none;
+            &::-webkit-search-cancel-button{
+                display: none;   
+            }
         }
         #search-button{
             border: none;

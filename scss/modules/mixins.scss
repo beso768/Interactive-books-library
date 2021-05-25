@@ -20,3 +20,23 @@
 @mixin border($px,$type,$color){
     border: $px $type $color;
 }
+@mixin chatbot{
+    .book-wrapper{
+        @include justify(space-between);
+        flex-wrap: wrap;
+        .book{
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            max-width: 255px;
+            max-height: 320px;
+            margin-bottom:50px;
+            margin-right: 10px;
+            h6{
+                @include font($bold,24px,$primary);
+                background: white;
+                padding: 17px 6px;
+            }
+        }
+    }
+}

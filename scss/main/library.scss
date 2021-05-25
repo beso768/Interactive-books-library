@@ -1,0 +1,75 @@
+.library-main-section{
+    @include section($background);
+    padding: 2% 3.5%;
+    .filter-section{
+        display: flex;
+        #select-filter{
+            background: $primary;
+            height: max-content;
+            @include font($bold,24px,white);
+            padding: 5px;
+            border: none;
+            outline: none;
+            margin-right: 2%;
+        }
+        .tags{
+            display: flex;
+            flex-wrap: wrap;
+            @include font($bold,24px,$primary);
+            ul{
+                display: flex;
+                li{
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+    .divide{
+        display: flex;
+        align-items: baseline;
+        hr{
+            width: 100%;
+            height: 2px;
+            background-color: $primary;  
+            border: none;
+        }
+        #table-icon{
+            cursor: pointer;
+            margin-left: 5px
+        }
+    }
+    .chatbots{
+        @include chatbot;
+        @include d-flex(unset,center,column);
+        padding-top: 3%;
+        #sign{
+            position: absolute;
+            bottom: 68px;
+            right: 10px;
+        }
+        button{
+            background: $primary;
+            padding: 12px;
+            border: none;
+            cursor: pointer;
+        }
+    }
+    .letters-filter{
+        display: none;
+        column-count: 4;
+        column-rule: 1px solid #707070;
+        column-gap: 8%;
+        padding-top: 3%;
+        ul{
+            padding: 8px 0px;
+            h4{
+                @include font($nino-mtavruli,24px,$primary)
+            }
+            li{
+                @include font($bold,24px,$primary);
+                cursor: pointer;
+            }
+        }
+    }
+    
+}

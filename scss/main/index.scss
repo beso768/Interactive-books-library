@@ -24,7 +24,7 @@
         width: 100%;
         max-width: 1280px;
         p{
-            @include font($nino-mtavruli,42px,$font-main-color);
+            @include font($nino-mtavruli,42px,$primary);
             padding: 8% 11%;
             text-align: center;
         }
@@ -38,33 +38,20 @@
     padding: 3%;
     @include d-flex(space-around,unset,column);
     h3{
-        @include font($nino-mtavruli,22px,$font-main-color);
+        @include font($nino-mtavruli,22px,$primary);
         padding-bottom: 2%;
     }
-    .book-wrapper{
-        @include d-flex(space-between,unset,unset);
-        flex-wrap: wrap;
-        .book{
-            max-width: 255px;
-            max-height: 320px;
-            margin: 0 45px 50px 0;
-            h6{
-                @include font($bold,24px,$font-main-color);
-                background: white;
-                padding: 17px 2px;
-            }
-        }
-    }
+    @include chatbot;
 }
 #user-section{
     @include d-flex(center,center,column);
     height: 100vh;
-    @include font($bold,60px,$font-main-color);
+    @include font($bold,60px,$primary);
     a{
         width: 37%;
         height: 180px;
         @include d-flex(center,center,unset);
-        background: $font-main-color;
+        background: $primary;
         color: white;
         margin-bottom: 5%;
     }
