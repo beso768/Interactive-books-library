@@ -76,6 +76,7 @@ a {
   font-display: swap; }
 
 header {
+  position: relative;
   background: #EBEBEB;
   height: 64px;
   padding: 7px 38px;
@@ -114,6 +115,19 @@ header {
     header nav img {
       cursor: pointer;
       margin-left: 70px; }
+    header nav #site-search {
+      position: absolute;
+      width: 26%;
+      height: 48px;
+      right: 36px;
+      top: 70px;
+      border: 1px solid #527178; }
+    header nav #search-button {
+      border: none;
+      background: none;
+      position: absolute;
+      right: 36px;
+      top: 75px; }
 
 .home-first-section {
   background: #EBEBEB;
@@ -211,6 +225,59 @@ header {
     margin-bottom: 5%; }
   #user-section h1 {
     text-align: center; }
+
+.news-wrapper {
+  background: #EBEBEB;
+  margin-top: 60px;
+  padding: 2% 3.5%; }
+  .news-wrapper .tags {
+    display: flex;
+    font-family: "Sandro-bold";
+    font-size: 24px;
+    color: #527178; }
+    .news-wrapper .tags ul {
+      display: flex; }
+      .news-wrapper .tags ul li {
+        cursor: pointer; }
+  .news-wrapper .news-first-section, .news-wrapper .news-second-section {
+    margin-top: 5%; }
+    .news-wrapper .news-first-section h4, .news-wrapper .news-second-section h4 {
+      font-family: "BPG Nino Mtavruli";
+      font-size: 22px;
+      color: #527178; }
+    .news-wrapper .news-first-section p, .news-wrapper .news-second-section p {
+      font-family: "Sandro-regular";
+      font-size: 28px;
+      color: #527178;
+      margin: 2% 0; }
+    .news-wrapper .news-first-section .videos-section, .news-wrapper .news-second-section .videos-section {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap; }
+      .news-wrapper .news-first-section .videos-section div, .news-wrapper .news-second-section .videos-section div {
+        width: 550px;
+        height: 300px;
+        background: white;
+        margin: 0 15px 50px 0; }
+  .news-wrapper .news-second-section {
+    margin-top: 2%; }
+    .news-wrapper .news-second-section .video {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      background: white;
+      width: 100%;
+      max-width: 1280px;
+      margin: auto; }
+      .news-wrapper .news-second-section .video p {
+        font-family: "BPG Nino Mtavruli";
+        font-size: 42px;
+        color: #527178;
+        padding: 8% 11%;
+        text-align: center; }
+      .news-wrapper .news-second-section .video img {
+        cursor: pointer; }
 
 .about-main-section {
   margin-top: 60px;

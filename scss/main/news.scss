@@ -1,0 +1,52 @@
+.news-wrapper{
+    @include section($background);
+    padding: 2% 3.5%;
+    .tags{
+        display: flex;
+        @include font($bold,24px,$font-main-color);
+        ul{
+            display: flex;
+            li{
+                cursor: pointer;
+            }
+        }
+    }
+    .news-first-section, .news-second-section{
+        margin-top: 5%;
+        h4{
+            @include font($nino-mtavruli,22px,$font-main-color);
+        }
+        p{
+            @include font($regular,28px,$font-main-color);
+            margin: 2% 0;
+        }
+        .videos-section{
+            @include justify(space-between,);
+            flex-wrap: wrap;
+            div{
+                width: 550px;
+                height: 300px;
+                background: white;
+                margin: 0 15px 50px 0;
+            }
+        }
+    }
+    .news-second-section{
+        margin-top: 2%;
+        .video{
+            @include d-flex(center,center,column);
+            background: white;
+            width: 100%;
+            max-width: 1280px;
+            margin: auto;
+            p{
+                @include font($nino-mtavruli,42px,$font-main-color);
+                padding: 8% 11%;
+                text-align: center;
+            }
+            img{
+                cursor: pointer;
+            }
+        }
+    }
+}

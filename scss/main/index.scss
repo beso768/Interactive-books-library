@@ -1,5 +1,5 @@
 .home-first-section{
-    @include section($background,60px);
+    @include section($background);
     padding: 0 3% 3% 3%;
     p{
         @include font($regular,28px,black);
@@ -15,7 +15,7 @@
     }   
 }
 .about-project{
-    @include section($background,60px);
+    @include section($background);
     @include d-flex(center,unset,unset);
     padding: 3% 9%;
     div{
@@ -34,7 +34,7 @@
     }
 }
 .interactive-books{
-    @include section($background,60px);
+    @include section($background);
     padding: 3%;
     @include d-flex(space-around,unset,column);
     h3{

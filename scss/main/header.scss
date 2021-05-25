@@ -1,4 +1,5 @@
 header{
+    position: relative;
     background: $background;
     height: 64px;
     padding: 7px 38px;
@@ -39,6 +40,21 @@ header{
             cursor: pointer;
             margin-left: 70px;
         }
+        #site-search{
+            position: absolute;
+            width: 26%;
+            height: 48px;
+            right: 36px;
+            top: 70px;
+            @include border(1px,solid,$font-main-color);
+        }
+        #search-button{
+            border: none;
+            background: none;
+            position: absolute;
+            right: 36px;
+            top: 75px;
+        }
     }
-    
+
 }

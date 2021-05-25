@@ -8,12 +8,15 @@
     align-items: $align;
     flex-direction: $direction;
 }
-@mixin section($color,$mrg){
-    background: $background;
+@mixin section($color){
+    background: $color;
     margin-top:60px;
 }
 @mixin font($family,$size,$color){
     font-family: $family;
     font-size: $size;
     color: $color;
+}
+@mixin border($px,$type,$color){
+    border: $px $type $color;
 }
