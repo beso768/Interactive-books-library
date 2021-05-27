@@ -2,7 +2,7 @@
     @include section($background);
     padding: 0 3% 3% 3%;
     p{
-        @include font($regular,28px,black);
+        @include font($regular,28px,$primary);
         font-size: 28px;
         padding-top: 1%;
         line-height: 32px;

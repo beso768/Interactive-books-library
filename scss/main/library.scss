@@ -1,6 +1,6 @@
 .library-main-section{
     @include section($background);
-    padding: 2% 3.5%;
+    padding: 23px 38px;
     .filter-section{
         display: flex;
         #select-filter{
@@ -13,15 +13,7 @@
             margin-right: 2%;
         }
         .tags{
-            display: flex;
-            flex-wrap: wrap;
-            @include font($bold,24px,$primary);
-            ul{
-                display: flex;
-                li{
-                    cursor: pointer;
-                }
-            }
+            @include tags;
         }
     }
     .divide{
@@ -40,7 +32,6 @@
     }
     .chatbots{
         @include chatbot;
-        @include d-flex(unset,center,column);
         padding-top: 3%;
         #sign{
             position: absolute;
@@ -60,6 +51,9 @@
         column-rule: 1px solid #707070;
         column-gap: 8%;
         padding-top: 3%;
+        @media (max-width:768px) {
+            column-count: 3;
+        }
         ul{
             padding: 8px 0px;
             h4{

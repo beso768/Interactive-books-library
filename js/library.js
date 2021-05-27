@@ -13,7 +13,7 @@ tableIcon.addEventListener("click",function(){
         showHide = false;
     }else{
         letters.style.display = "none";
-        chatbots.style.display = "flex";
+        chatbots.style.display = "block";
         tableIcon.src = "images/table1.svg";
         showHide = true;
     }

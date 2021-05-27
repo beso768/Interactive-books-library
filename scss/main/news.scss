@@ -1,15 +1,8 @@
 .news-wrapper{
     @include section($background);
-    padding: 2% 3.5%;
+    padding: 18px 38px;
     .tags{
-        display: flex;
-        @include font($bold,24px,$primary);
-        ul{
-            display: flex;
-            li{
-                cursor: pointer;
-            }
-        }
+        @include tags;
     }
     .news-first-section, .news-second-section{
         margin-top: 5%;

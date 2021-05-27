@@ -1,0 +1,140 @@
+.chatbot-section{
+    @include section($background);
+    @include justify(center);
+    padding: 3% 38px;
+    .chatbot-wrapper{
+        @include border(1px,solid,$primary);
+        max-width: 1350px;
+        padding: 3%;
+        h4{
+            @include font($nino-mtavruli,22px,$primary);
+        }
+        p,span{
+            @include font($bold,22px,$primary);
+        }
+        .info-section{
+            @include justify(space-between);
+            padding: 2% 0;
+            .image-side{
+                margin-right: 3%;
+                img{
+                    width: 100%;
+                    min-width: 200px;
+                }
+                .group-members{
+                    h4{
+                        margin-top: 8%;
+                    }
+                }
+            }
+            .text-side{
+                p{
+                    @include font($regular,24px,$primary);
+                }
+                max-width: 920px;
+            }
+        }
+        .statistics-section{
+            background: white;
+            padding: 1%;
+        }
+        .links-section{
+            margin-top: 2%;
+            a{
+                @include font($bold,24px,$primary);
+                padding-bottom: 6px;
+            }
+            .chatbot-link{
+                margin-top: 10px;
+                display: flex;
+                align-items: center
+            }
+            .facebook-buttons{
+                margin-top: 10px;
+            }
+        }
+    }
+    h2{
+        @include font($nino-mtavruli,32px,$primary);
+    }
+}
+
+// =====chatbot-messenger===== 
+.chat-bar-collapse{
+    position: fixed;
+    right: 2%;
+    bottom: 110px;
+    .content{
+        opacity: 0;
+        transition: 0.1s;
+        width: 512px;
+        background: white;
+        height: 450px;
+        padding: 4%;
+        @include border(1px,solid,$border);
+        .top-side{
+            @include justify(space-between);
+            h4{
+                @include font($nino-mtavruli,32px,$primary);
+            }
+            #close-chatbox{
+                border: none;
+                background: none;
+                cursor: pointer;
+            }
+        }
+        hr{
+            margin: 4% 0 7% 0;
+            @include border(1px,solid,$border);
+        }
+        .chatbox{
+            position: relative;
+            width: 100%;
+            height: 58%;
+            @include border(1px,solid,$border);
+            p{
+                margin: 5px 0 ;
+                position: absolute;
+            }
+            #chatbot-msg{
+                @include font($bold,22px,$primary);
+                left: 5px;
+            }
+            #customer-msg{
+                background: $primary;
+                @include font($bold,22px,white);
+                border-radius: 50px;
+                padding: 8px;
+                right: 5px;
+                top: 40px
+            }
+        }
+        #msg-form{
+            @include justify(space-between);
+            margin-top: 7%;
+            input{
+                width: 87%;
+                @include border(1px,solid,$border);
+            }   
+            button{
+                border: none;
+                background: none;
+                cursor: pointer;
+            }
+        }
+    }
+    #messenger-button{
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        transition: 0.1s;
+        background: white;
+        border-radius: 50%;
+        width: 128px;
+        height: 128px;
+        cursor: pointer;
+        @include border(1px,solid,$primary);
+        @include d-flex(center,center,unset);
+        z-index: 2;
+    }
+}

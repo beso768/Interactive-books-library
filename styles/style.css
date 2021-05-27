@@ -112,9 +112,8 @@ header {
         header nav ul li:last-child {
           border: none;
           min-width: fit-content; }
-    header nav img {
-      cursor: pointer;
-      margin-left: 70px; }
+        header nav ul li:hover {
+          background: white; }
     header nav #site-search {
       position: absolute;
       width: 26%;
@@ -134,6 +133,74 @@ header {
       position: absolute;
       right: 36px;
       top: 75px; }
+  header #mobile-nav {
+    display: none;
+    cursor: pointer;
+    z-index: 10; }
+    header #mobile-nav .bar1, header #mobile-nav .bar2, header #mobile-nav .bar3 {
+      width: 35px;
+      height: 5px;
+      background-color: #527178;
+      margin: 6px 0;
+      transition: 0.4s;
+      border-radius: 8px;
+      border-radius: 15%; }
+    header #mobile-nav .bar2 {
+      width: 28px;
+      margin-left: 7px; }
+    header #mobile-nav #navbar {
+      display: flex;
+      justify-content: unset;
+      align-items: center;
+      flex-direction: column;
+      box-shadow: 0px 0px 8px 2px black;
+      height: 100vh;
+      background: #EBEBEB;
+      position: fixed;
+      right: -350px;
+      top: 0px;
+      width: 318px;
+      padding-top: 43px;
+      transition: 0.5s; }
+      header #mobile-nav #navbar ul {
+        flex-direction: column;
+        height: auto;
+        width: 100%;
+        justify-content: unset;
+        margin-bottom: 35px; }
+        header #mobile-nav #navbar ul li {
+          display: flex;
+          align-items: center;
+          width: 100%;
+          height: auto;
+          border: none;
+          border-bottom: 1px solid #52717880; }
+          header #mobile-nav #navbar ul li a {
+            width: 100%;
+            height: 100%;
+            padding: 40px 0; }
+      header #mobile-nav #navbar form {
+        position: relative;
+        width: 90%; }
+        header #mobile-nav #navbar form #site-search {
+          width: 100%;
+          right: 0;
+          top: 10px; }
+        header #mobile-nav #navbar form #search-button {
+          right: 5px;
+          top: 15px; }
+    header #mobile-nav #burger-icon {
+      position: fixed;
+      right: 25px;
+      z-index: 1; }
+    header #mobile-nav .change#navbar {
+      right: 0; }
+    header #mobile-nav .change.bar1 {
+      transform: rotate(-45deg) translate(-9px, 6px); }
+    header #mobile-nav .change.bar2 {
+      opacity: 0; }
+    header #mobile-nav .change.bar3 {
+      transform: rotate(45deg) translate(-9px, -7px); }
 
 .home-first-section {
   background: #EBEBEB;
@@ -142,7 +209,7 @@ header {
   .home-first-section p {
     font-family: "Sandro-regular";
     font-size: 28px;
-    color: black;
+    color: #527178;
     font-size: 28px;
     padding-top: 1%;
     line-height: 32px; }
@@ -237,7 +304,7 @@ header {
 .library-main-section {
   background: #EBEBEB;
   margin-top: 60px;
-  padding: 2% 3.5%; }
+  padding: 23px 38px; }
   .library-main-section .filter-section {
     display: flex; }
     .library-main-section .filter-section #select-filter {
@@ -252,14 +319,18 @@ header {
       margin-right: 2%; }
     .library-main-section .filter-section .tags {
       display: flex;
-      flex-wrap: wrap;
       font-family: "Sandro-bold";
       font-size: 24px;
       color: #527178; }
+      .library-main-section .filter-section .tags span {
+        font-size: 30px; }
       .library-main-section .filter-section .tags ul {
-        display: flex; }
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap; }
         .library-main-section .filter-section .tags ul li {
-          cursor: pointer; }
+          cursor: pointer;
+          margin: 4px; }
   .library-main-section .divide {
     display: flex;
     align-items: baseline; }
@@ -272,10 +343,6 @@ header {
       cursor: pointer;
       margin-left: 5px; }
   .library-main-section .chatbots {
-    display: flex;
-    justify-content: unset;
-    align-items: center;
-    flex-direction: column;
     padding-top: 3%; }
     .library-main-section .chatbots .book-wrapper {
       display: flex;
@@ -310,6 +377,9 @@ header {
     column-rule: 1px solid #707070;
     column-gap: 8%;
     padding-top: 3%; }
+    @media (max-width: 768px) {
+      .library-main-section .letters-filter {
+        column-count: 3; } }
     .library-main-section .letters-filter ul {
       padding: 8px 0px; }
       .library-main-section .letters-filter ul h4 {
@@ -325,16 +395,21 @@ header {
 .news-wrapper {
   background: #EBEBEB;
   margin-top: 60px;
-  padding: 2% 3.5%; }
+  padding: 18px 38px; }
   .news-wrapper .tags {
     display: flex;
     font-family: "Sandro-bold";
     font-size: 24px;
     color: #527178; }
+    .news-wrapper .tags span {
+      font-size: 30px; }
     .news-wrapper .tags ul {
-      display: flex; }
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap; }
       .news-wrapper .tags ul li {
-        cursor: pointer; }
+        cursor: pointer;
+        margin: 4px; }
   .news-wrapper .news-first-section, .news-wrapper .news-second-section {
     margin-top: 5%; }
     .news-wrapper .news-first-section h4, .news-wrapper .news-second-section h4 {
@@ -378,7 +453,8 @@ header {
 .about-main-section {
   margin-top: 60px;
   display: flex;
-  justify-content: space-between; }
+  justify-content: space-between;
+  flex-wrap: wrap; }
   .about-main-section .nav-side-bar {
     padding: 3%; }
     .about-main-section .nav-side-bar li {
@@ -425,6 +501,168 @@ header {
         font-family: "Sandro-regular";
         font-size: 22px;
         color: #527178; }
+
+.chatbot-section {
+  background: #EBEBEB;
+  margin-top: 60px;
+  display: flex;
+  justify-content: center;
+  padding: 3% 38px; }
+  .chatbot-section .chatbot-wrapper {
+    border: 1px solid #527178;
+    max-width: 1350px;
+    padding: 3%; }
+    .chatbot-section .chatbot-wrapper h4 {
+      font-family: "BPG Nino Mtavruli";
+      font-size: 22px;
+      color: #527178; }
+    .chatbot-section .chatbot-wrapper p, .chatbot-section .chatbot-wrapper span {
+      font-family: "Sandro-bold";
+      font-size: 22px;
+      color: #527178; }
+    .chatbot-section .chatbot-wrapper .info-section {
+      display: flex;
+      justify-content: space-between;
+      padding: 2% 0; }
+      .chatbot-section .chatbot-wrapper .info-section .image-side {
+        margin-right: 3%; }
+        .chatbot-section .chatbot-wrapper .info-section .image-side img {
+          width: 100%;
+          min-width: 200px; }
+        .chatbot-section .chatbot-wrapper .info-section .image-side .group-members h4 {
+          margin-top: 8%; }
+      .chatbot-section .chatbot-wrapper .info-section .text-side {
+        max-width: 920px; }
+        .chatbot-section .chatbot-wrapper .info-section .text-side p {
+          font-family: "Sandro-regular";
+          font-size: 24px;
+          color: #527178; }
+    .chatbot-section .chatbot-wrapper .statistics-section {
+      background: white;
+      padding: 1%; }
+    .chatbot-section .chatbot-wrapper .links-section {
+      margin-top: 2%; }
+      .chatbot-section .chatbot-wrapper .links-section a {
+        font-family: "Sandro-bold";
+        font-size: 24px;
+        color: #527178;
+        padding-bottom: 6px; }
+      .chatbot-section .chatbot-wrapper .links-section .chatbot-link {
+        margin-top: 10px;
+        display: flex;
+        align-items: center; }
+      .chatbot-section .chatbot-wrapper .links-section .facebook-buttons {
+        margin-top: 10px; }
+  .chatbot-section h2 {
+    font-family: "BPG Nino Mtavruli";
+    font-size: 32px;
+    color: #527178; }
+
+.chat-bar-collapse {
+  position: fixed;
+  right: 2%;
+  bottom: 110px; }
+  .chat-bar-collapse .content {
+    opacity: 0;
+    transition: 0.1s;
+    width: 512px;
+    background: white;
+    height: 450px;
+    padding: 4%;
+    border: 1px solid #707070; }
+    .chat-bar-collapse .content .top-side {
+      display: flex;
+      justify-content: space-between; }
+      .chat-bar-collapse .content .top-side h4 {
+        font-family: "BPG Nino Mtavruli";
+        font-size: 32px;
+        color: #527178; }
+      .chat-bar-collapse .content .top-side #close-chatbox {
+        border: none;
+        background: none;
+        cursor: pointer; }
+    .chat-bar-collapse .content hr {
+      margin: 4% 0 7% 0;
+      border: 1px solid #707070; }
+    .chat-bar-collapse .content .chatbox {
+      position: relative;
+      width: 100%;
+      height: 58%;
+      border: 1px solid #707070; }
+      .chat-bar-collapse .content .chatbox p {
+        margin: 5px 0;
+        position: absolute; }
+      .chat-bar-collapse .content .chatbox #chatbot-msg {
+        font-family: "Sandro-bold";
+        font-size: 22px;
+        color: #527178;
+        left: 5px; }
+      .chat-bar-collapse .content .chatbox #customer-msg {
+        background: #527178;
+        font-family: "Sandro-bold";
+        font-size: 22px;
+        color: white;
+        border-radius: 50px;
+        padding: 8px;
+        right: 5px;
+        top: 40px; }
+    .chat-bar-collapse .content #msg-form {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 7%; }
+      .chat-bar-collapse .content #msg-form input {
+        width: 87%;
+        border: 1px solid #707070; }
+      .chat-bar-collapse .content #msg-form button {
+        border: none;
+        background: none;
+        cursor: pointer; }
+  .chat-bar-collapse #messenger-button {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    transition: 0.1s;
+    background: white;
+    border-radius: 50%;
+    width: 128px;
+    height: 128px;
+    cursor: pointer;
+    border: 1px solid #527178;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: unset;
+    z-index: 2; }
+
+@media (max-width: 1470px) {
+  header nav ul li {
+    font-size: 28px;
+    padding: 0px 23px; }
+  #user-icon {
+    margin-left: 5px; } }
+
+@media (max-width: 1220px) {
+  header nav {
+    display: none; }
+  header #mobile-nav {
+    display: block; } }
+
+@media (max-width: 620px) {
+  .library-main-section .chatbots .book-wrapper {
+    justify-content: center; }
+  .library-main-section .filter-section {
+    flex-wrap: wrap;
+    justify-content: center; }
+    .library-main-section .filter-section #select-filter {
+      margin-bottom: 50px; }
+    .library-main-section .filter-section .tags {
+      flex-wrap: wrap;
+      justify-content: center; }
+  .library-main-section .letters-filter {
+    column-count: 2; }
+  .news-wrapper .tags {
+    flex-wrap: wrap;
+    justify-content: center; } }
 
 footer {
   display: flex;

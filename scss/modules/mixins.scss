@@ -40,3 +40,18 @@
         }
     }
 }
+@mixin tags{
+    display: flex;
+    @include font($bold,24px,$primary);
+    span{
+        font-size: 30px;
+    }
+    ul{
+        @include justify(center);
+        flex-wrap: wrap;
+        li{
+            cursor: pointer;
+            margin: 4px;
+        }
+    }
+}

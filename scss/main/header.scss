@@ -27,6 +27,7 @@ header{
                 padding: 0px 30px;
                 border-right: 1px solid $primary;
                 height: 32px;
+
                 a{
                     color: $primary; 
                 }
@@ -34,11 +35,10 @@ header{
                     border:none;
                     min-width: fit-content;
                 }
+                &:hover{
+                    background: white;
+                }
             }
-        }
-        img{
-            cursor: pointer;
-            margin-left: 70px;
         }
         #site-search{
             position: absolute;
@@ -59,6 +59,84 @@ header{
             position: absolute;
             right: 36px;
             top: 75px;
+        }
+    }
+    #mobile-nav{
+        display: none;
+        cursor: pointer;
+        z-index: 10;
+        .bar1, .bar2, .bar3 {
+        width: 35px;
+        height: 5px;
+        background-color: $primary;
+        margin: 6px 0;
+        transition: 0.4s;
+        border-radius: 8px;
+        border-radius: 15%;
+        }
+        .bar2{
+            width: 28px;
+            margin-left: 7px;
+        }
+        #navbar{
+            @include d-flex(unset,center,column);
+            box-shadow: 0px 0px 8px 2px black;
+            height: 100vh;
+            background: $background;
+            position: fixed;
+            right: -350px;
+            top: 0px;
+            width: 318px;
+            padding-top: 43px;
+            transition: 0.5s;
+            ul{
+                flex-direction: column;
+                height: auto;
+                width: 100%;
+                justify-content: unset;
+                margin-bottom: 35px;
+                li{
+                    display: flex;
+                    align-items: center;
+                    width: 100%;
+                    height: auto;
+                    border: none;
+                    border-bottom: 1px solid #52717880;
+                    a{
+                        width: 100%;
+                        height: 100%;
+                        padding: 40px 0;
+                    }
+                }
+            }
+            form{
+                position: relative;
+                width: 90%;
+                #site-search{
+                    width: 100%;
+                    right: 0;
+                    top: 10px;
+                }
+                #search-button{
+                    right: 5px;
+                    top: 15px;
+                }
+            }
+        }
+        #burger-icon{
+            position: fixed;
+            right: 25px;
+            z-index: 1;
+        }
+        .change#navbar{
+            right: 0;
+        }
+        .change.bar1 {
+        transform: rotate(-45deg) translate(-9px, 6px);
+        }
+        .change.bar2 {opacity: 0;}
+        .change.bar3 {
+        transform: rotate(45deg) translate(-9px, -7px);
         }
     }
 
