@@ -1,6 +1,6 @@
 .news-wrapper{
     @include section($background);
-    padding: 18px 38px;
+    padding: 10px 3%;
     .tags{
         @include tags;
     }
@@ -17,7 +17,7 @@
             @include justify(space-between,);
             flex-wrap: wrap;
             div{
-                width: 550px;
+                width:30%;
                 height: 300px;
                 background: white;
                 margin: 0 15px 50px 0;
@@ -28,18 +28,7 @@
         margin-top: 2%;
         .video{
             @include d-flex(center,center,column);
-            background: white;
-            width: 100%;
-            max-width: 1280px;
-            margin: auto;
-            p{
-                @include font($nino-mtavruli,42px,$primary);
-                padding: 8% 11%;
-                text-align: center;
-            }
-            img{
-                cursor: pointer;
-            }
+            @include video;
         }
     }
 }

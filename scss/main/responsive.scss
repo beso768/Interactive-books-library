@@ -1,7 +1,7 @@
 @media (max-width:1470px) {
-    header nav ul li{
+    header nav ul li a{
         font-size: 28px;
-        padding: 0px 23px;
+        padding: 18px 23px;
     }
     #user-icon{
         margin-left: 5px;
@@ -16,16 +16,44 @@
         display: block;
 
     }
-
-
-
-
+    // ==news==
+    .news-wrapper .news-first-section .videos-section{
+        div{
+            width: 550px;
+            margin: 0 0 6% 0;
+        }  
+        justify-content: center;;
+    }
+    // ==about==
+    .about-main-section {
+        flex-wrap: wrap;
+        .nav-side-bar{
+            width: 100%;
+        }
+        .p-wrapper{
+            padding: 5px 3%;
+        }
+    }
 }
-@media (max-width:620px){
+@media (max-width:680px){
 
+    // ==main===
+    .home-first-section{
+        p{
+            font-size: 25px;
+            span,a{
+                font-size: 25px;
+            }
+        }
+        
+    }
+    .interactive-books{
+        h3{
+            text-align: center;
+        }
+    }
     // ==library====
     .library-main-section   {
-        
         .chatbots{
             .book-wrapper{
                 justify-content: center;
@@ -48,14 +76,99 @@
         }
     }
 
-
-
     // ==news==
     .news-wrapper{
         .tags{
             flex-wrap: wrap;
             justify-content: center;
         }
+    }
+
+    // ==chatbot===
+    .chatbot-section {
+        .chat-bar-collapse {
+            bottom: 51px;
+            width: 97%;
+            height: 76%;
+            .content{
+                width: 100%;
+                height: 100%;
+                .chatbox{
+                    width: 100%;
+                    height: 72%;
+                    #customer-msg{
+                        top: 58px;
+                    }
+                }
+            }
+        }
+        .chatbot-wrapper{
+            .info-section{
+                flex-wrap: wrap;
+                .image-side{
+                    display: flex;
+                    margin: 0 0 3% 0;
+                    width: 100%;
+                    img{
+                        max-width:256px ;
+                        margin-right: 11%;
+                    }
+                }
+            }
+        }
+    } 
+
+    // ==footer==
+    footer{
+        flex-wrap: wrap;
+        a{
+            margin: 7px;
+        }
+    }
+    .social-web{
+        flex-direction: column;
+        a:first-child{
+            margin-left: 14px;
+        }
+    }
+    .links{
+        a:first-child{
+            position: absolute;
+            right: 12px;
+            top: 14px;
+        }
+    }
+}
+
+@media (max-width:540px){
+    // ==chatbot==
+    .chatbot-section{
+        justify-content: unset;
+        .chatbot-wrapper{
+            border: none;
+            .info-section{
+                .image-side{
+                    flex-wrap: wrap;
+                }
+            }
+            .links-section a{
+                font-size: 19px;
+            }
+        }
+    }
+}
+
+
+// ===galaxy fold==
+@media (max-width:360px){
+    // ==header==
+    header .logo span{
+        bottom: 15px;
+        font-size: 17px;
+    }
+    // ==about==
+    .about-main-section .nav-side-bar li a{
+        font-size: 30px;
     }
 }
 

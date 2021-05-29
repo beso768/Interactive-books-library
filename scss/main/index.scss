@@ -19,29 +19,31 @@
     @include d-flex(center,unset,unset);
     padding: 3% 9%;
     div{
-        @include d-flex(center,center,column);
-        background: white;
-        width: 100%;
-        max-width: 1280px;
-        p{
-            @include font($nino-mtavruli,42px,$primary);
-            padding: 8% 11%;
-            text-align: center;
-        }
-        img{
-            cursor: pointer;
-        }
+        @include video;
     }
 }
 .interactive-books{
     @include section($background);
-    padding: 3%;
+    @include chatbot;
     @include d-flex(space-around,unset,column);
+    @media (max-width: 1460px){
+        .book-wrapper {
+            grid-template-columns: 15% 15% 15% 15% 15% 15%;
+            grid-column-gap: 2%;
+        }
+    }
+    @media (max-width: 1300px) and (min-widtt:1100px){
+        .book-wrapper {
+            grid-template-columns: 23% 22% 22%;
+            grid-column-gap: 17%;
+        }
+    }
+    padding: 3%;
     h3{
         @include font($nino-mtavruli,22px,$primary);
-        padding-bottom: 2%;
+        padding-bottom: 4%;
     }
-    @include chatbot;
+    
 }
 #user-section{
     @include d-flex(center,center,column);

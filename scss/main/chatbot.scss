@@ -1,7 +1,7 @@
 .chatbot-section{
     @include section($background);
     @include justify(center);
-    padding: 3% 38px;
+    padding: 3%;
     .chatbot-wrapper{
         @include border(1px,solid,$primary);
         max-width: 1350px;
@@ -47,7 +47,8 @@
             .chatbot-link{
                 margin-top: 10px;
                 display: flex;
-                align-items: center
+                align-items: center;
+                flex-wrap: wrap;
             }
             .facebook-buttons{
                 margin-top: 10px;
@@ -62,11 +63,11 @@
 // =====chatbot-messenger===== 
 .chat-bar-collapse{
     position: fixed;
+    z-index: 1;
     right: 2%;
     bottom: 110px;
     .content{
-        opacity: 0;
-        transition: 0.1s;
+        display: none;
         width: 512px;
         background: white;
         height: 450px;

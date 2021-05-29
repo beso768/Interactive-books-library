@@ -1,13 +1,15 @@
 .about-main-section{
     margin-top: 60px;
     @include justify(space-between);
-    flex-wrap: wrap;
     .nav-side-bar {
         padding: 3%;
         li{
             margin-bottom: 20px;
             a{
                 @include font($bold,34px,$primary);
+            }
+            &:hover{
+                background: $background;
             }
         }
     }

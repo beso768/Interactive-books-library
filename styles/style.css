@@ -79,7 +79,7 @@ header {
   position: relative;
   background: #EBEBEB;
   height: 64px;
-  padding: 7px 38px;
+  padding: 5px 3%;
   display: flex;
   justify-content: space-between; }
   header .logo {
@@ -90,8 +90,8 @@ header {
       font-family: "BPG Nino Mtavruli";
       color: #527178;
       font-size: 22px;
-      bottom: 0px;
-      left: 64px;
+      bottom: 7px;
+      left: 58px;
       width: 247px; }
   header nav {
     display: flex;
@@ -104,15 +104,15 @@ header {
       header nav ul li {
         font-family: "Sandro-bold";
         font-size: 34px;
-        padding: 0px 30px;
         border-right: 1px solid #527178;
         height: 32px; }
         header nav ul li a {
+          padding: 18px 30px;
           color: #527178; }
         header nav ul li:last-child {
           border: none;
           min-width: fit-content; }
-        header nav ul li:hover {
+        header nav ul li:hover a {
           background: white; }
     header nav #site-search {
       position: absolute;
@@ -178,7 +178,7 @@ header {
           header #mobile-nav #navbar ul li a {
             width: 100%;
             height: 100%;
-            padding: 40px 0; }
+            padding: 40px 20px; }
       header #mobile-nav #navbar form {
         position: relative;
         width: 90%; }
@@ -190,9 +190,11 @@ header {
           right: 5px;
           top: 15px; }
     header #mobile-nav #burger-icon {
-      position: fixed;
+      position: absolute;
       right: 25px;
       z-index: 1; }
+    header #mobile-nav .change#burger-icon {
+      position: fixed; }
     header #mobile-nav .change#navbar {
       right: 0; }
     header #mobile-nav .change.bar1 {
@@ -244,40 +246,74 @@ header {
       color: #527178;
       padding: 8% 11%;
       text-align: center; }
+      @media (max-width: 680px) {
+        .about-project div p {
+          font-size: 30px; } }
     .about-project div img {
-      cursor: pointer; }
+      width: 100%;
+      cursor: pointer;
+      max-width: 290px; }
 
 .interactive-books {
   background: #EBEBEB;
   margin-top: 60px;
-  padding: 3%;
   display: flex;
   justify-content: space-around;
   align-items: unset;
-  flex-direction: column; }
-  .interactive-books h3 {
-    font-family: "BPG Nino Mtavruli";
-    font-size: 22px;
-    color: #527178;
-    padding-bottom: 2%; }
+  flex-direction: column;
+  padding: 3%; }
   .interactive-books .book-wrapper {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap; }
+    display: grid;
+    grid-template-columns: 15% 15% 15% 15% 15% 15%;
+    grid-row-gap: 0;
+    grid-column-gap: 2%; }
     .interactive-books .book-wrapper .book {
       position: relative;
       display: flex;
       flex-direction: column;
-      max-width: 255px;
-      max-height: 320px;
-      margin-bottom: 50px;
-      margin-right: 10px; }
+      max-width: 256px;
+      margin-bottom: 10%; }
       .interactive-books .book-wrapper .book h6 {
         font-family: "Sandro-bold";
         font-size: 24px;
         color: #527178;
         background: white;
         padding: 17px 6px; }
+      .interactive-books .book-wrapper .book img {
+        width: 100%; }
+      .interactive-books .book-wrapper .book #sign {
+        width: auto; }
+    @media (max-width: 1460px) {
+      .interactive-books .book-wrapper {
+        grid-template-columns: 22% 22% 22% 22%;
+        grid-column-gap: 5%; } }
+    @media (max-width: 1235px) {
+      .interactive-books .book-wrapper {
+        grid-template-columns: 22% 22% 22% 22%;
+        grid-column-gap: 4%; }
+        .interactive-books .book-wrapper .book {
+          margin-bottom: 5%; } }
+    @media (max-width: 1100px) {
+      .interactive-books .book-wrapper {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap; } }
+    @media (max-width: 640px) {
+      .interactive-books .book-wrapper {
+        justify-content: center; } }
+  @media (max-width: 1460px) {
+    .interactive-books .book-wrapper {
+      grid-template-columns: 15% 15% 15% 15% 15% 15%;
+      grid-column-gap: 2%; } }
+  @media (max-width: 1300px) and (min-widtt: 1100px) {
+    .interactive-books .book-wrapper {
+      grid-template-columns: 23% 22% 22%;
+      grid-column-gap: 17%; } }
+  .interactive-books h3 {
+    font-family: "BPG Nino Mtavruli";
+    font-size: 22px;
+    color: #527178;
+    padding-bottom: 4%; }
 
 #user-section {
   display: flex;
@@ -343,25 +379,50 @@ header {
       cursor: pointer;
       margin-left: 5px; }
   .library-main-section .chatbots {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     padding-top: 3%; }
     .library-main-section .chatbots .book-wrapper {
-      display: flex;
-      justify-content: space-between;
-      flex-wrap: wrap; }
+      display: grid;
+      grid-template-columns: 15% 15% 15% 15% 15% 15%;
+      grid-row-gap: 0;
+      grid-column-gap: 2%; }
       .library-main-section .chatbots .book-wrapper .book {
         position: relative;
         display: flex;
         flex-direction: column;
-        max-width: 255px;
-        max-height: 320px;
-        margin-bottom: 50px;
-        margin-right: 10px; }
+        max-width: 256px;
+        margin-bottom: 10%; }
         .library-main-section .chatbots .book-wrapper .book h6 {
           font-family: "Sandro-bold";
           font-size: 24px;
           color: #527178;
           background: white;
           padding: 17px 6px; }
+        .library-main-section .chatbots .book-wrapper .book img {
+          width: 100%; }
+        .library-main-section .chatbots .book-wrapper .book #sign {
+          width: auto; }
+      @media (max-width: 1460px) {
+        .library-main-section .chatbots .book-wrapper {
+          grid-template-columns: 22% 22% 22% 22%;
+          grid-column-gap: 5%; } }
+      @media (max-width: 1235px) {
+        .library-main-section .chatbots .book-wrapper {
+          grid-template-columns: 22% 22% 22% 22%;
+          grid-column-gap: 4%; }
+          .library-main-section .chatbots .book-wrapper .book {
+            margin-bottom: 5%; } }
+      @media (max-width: 1100px) {
+        .library-main-section .chatbots .book-wrapper {
+          display: flex;
+          justify-content: space-between;
+          flex-wrap: wrap; } }
+      @media (max-width: 640px) {
+        .library-main-section .chatbots .book-wrapper {
+          justify-content: center; } }
     .library-main-section .chatbots #sign {
       position: absolute;
       bottom: 68px;
@@ -395,7 +456,7 @@ header {
 .news-wrapper {
   background: #EBEBEB;
   margin-top: 60px;
-  padding: 18px 38px; }
+  padding: 10px 3%; }
   .news-wrapper .tags {
     display: flex;
     font-family: "Sandro-bold";
@@ -426,7 +487,7 @@ header {
       justify-content: space-between;
       flex-wrap: wrap; }
       .news-wrapper .news-first-section .videos-section div, .news-wrapper .news-second-section .videos-section div {
-        width: 550px;
+        width: 30%;
         height: 300px;
         background: white;
         margin: 0 15px 50px 0; }
@@ -437,24 +498,31 @@ header {
       justify-content: center;
       align-items: center;
       flex-direction: column;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
       background: white;
       width: 100%;
-      max-width: 1280px;
-      margin: auto; }
+      max-width: 1280px; }
       .news-wrapper .news-second-section .video p {
         font-family: "BPG Nino Mtavruli";
         font-size: 42px;
         color: #527178;
         padding: 8% 11%;
         text-align: center; }
+        @media (max-width: 680px) {
+          .news-wrapper .news-second-section .video p {
+            font-size: 30px; } }
       .news-wrapper .news-second-section .video img {
-        cursor: pointer; }
+        width: 100%;
+        cursor: pointer;
+        max-width: 290px; }
 
 .about-main-section {
   margin-top: 60px;
   display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap; }
+  justify-content: space-between; }
   .about-main-section .nav-side-bar {
     padding: 3%; }
     .about-main-section .nav-side-bar li {
@@ -463,6 +531,8 @@ header {
         font-family: "Sandro-bold";
         font-size: 34px;
         color: #527178; }
+      .about-main-section .nav-side-bar li:hover {
+        background: #EBEBEB; }
   .about-main-section .p-wrapper {
     background: #EBEBEB;
     padding: 48px; }
@@ -507,7 +577,7 @@ header {
   margin-top: 60px;
   display: flex;
   justify-content: center;
-  padding: 3% 38px; }
+  padding: 3%; }
   .chatbot-section .chatbot-wrapper {
     border: 1px solid #527178;
     max-width: 1350px;
@@ -550,7 +620,8 @@ header {
       .chatbot-section .chatbot-wrapper .links-section .chatbot-link {
         margin-top: 10px;
         display: flex;
-        align-items: center; }
+        align-items: center;
+        flex-wrap: wrap; }
       .chatbot-section .chatbot-wrapper .links-section .facebook-buttons {
         margin-top: 10px; }
   .chatbot-section h2 {
@@ -560,11 +631,11 @@ header {
 
 .chat-bar-collapse {
   position: fixed;
+  z-index: 1;
   right: 2%;
   bottom: 110px; }
   .chat-bar-collapse .content {
-    opacity: 0;
-    transition: 0.1s;
+    display: none;
     width: 512px;
     background: white;
     height: 450px;
@@ -635,9 +706,9 @@ header {
     z-index: 2; }
 
 @media (max-width: 1470px) {
-  header nav ul li {
+  header nav ul li a {
     font-size: 28px;
-    padding: 0px 23px; }
+    padding: 18px 23px; }
   #user-icon {
     margin-left: 5px; } }
 
@@ -645,9 +716,26 @@ header {
   header nav {
     display: none; }
   header #mobile-nav {
-    display: block; } }
+    display: block; }
+  .news-wrapper .news-first-section .videos-section {
+    justify-content: center; }
+    .news-wrapper .news-first-section .videos-section div {
+      width: 550px;
+      margin: 0 0 6% 0; }
+  .about-main-section {
+    flex-wrap: wrap; }
+    .about-main-section .nav-side-bar {
+      width: 100%; }
+    .about-main-section .p-wrapper {
+      padding: 5px 3%; } }
 
-@media (max-width: 620px) {
+@media (max-width: 680px) {
+  .home-first-section p {
+    font-size: 25px; }
+    .home-first-section p span, .home-first-section p a {
+      font-size: 25px; }
+  .interactive-books h3 {
+    text-align: center; }
   .library-main-section .chatbots .book-wrapper {
     justify-content: center; }
   .library-main-section .filter-section {
@@ -662,12 +750,62 @@ header {
     column-count: 2; }
   .news-wrapper .tags {
     flex-wrap: wrap;
-    justify-content: center; } }
+    justify-content: center; }
+  .chatbot-section .chat-bar-collapse {
+    bottom: 51px;
+    width: 97%;
+    height: 76%; }
+    .chatbot-section .chat-bar-collapse .content {
+      width: 100%;
+      height: 100%; }
+      .chatbot-section .chat-bar-collapse .content .chatbox {
+        width: 100%;
+        height: 72%; }
+        .chatbot-section .chat-bar-collapse .content .chatbox #customer-msg {
+          top: 58px; }
+  .chatbot-section .chatbot-wrapper .info-section {
+    flex-wrap: wrap; }
+    .chatbot-section .chatbot-wrapper .info-section .image-side {
+      display: flex;
+      margin: 0 0 3% 0;
+      width: 100%; }
+      .chatbot-section .chatbot-wrapper .info-section .image-side img {
+        max-width: 256px;
+        margin-right: 11%; }
+  footer {
+    flex-wrap: wrap; }
+    footer a {
+      margin: 7px; }
+  .social-web {
+    flex-direction: column; }
+    .social-web a:first-child {
+      margin-left: 14px; }
+  .links a:first-child {
+    position: absolute;
+    right: 12px;
+    top: 14px; } }
+
+@media (max-width: 540px) {
+  .chatbot-section {
+    justify-content: unset; }
+    .chatbot-section .chatbot-wrapper {
+      border: none; }
+      .chatbot-section .chatbot-wrapper .info-section .image-side {
+        flex-wrap: wrap; }
+      .chatbot-section .chatbot-wrapper .links-section a {
+        font-size: 19px; } }
+
+@media (max-width: 360px) {
+  header .logo span {
+    bottom: 15px;
+    font-size: 17px; }
+  .about-main-section .nav-side-bar li a {
+    font-size: 30px; } }
 
 footer {
   display: flex;
   justify-content: space-between;
-  flex-wrap: wrap;
+  position: relative;
   background: #527178;
   padding: 1%; }
   footer .social-web {

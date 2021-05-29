@@ -13,12 +13,13 @@ tableIcon.addEventListener("click",function(){
         showHide = false;
     }else{
         letters.style.display = "none";
-        chatbots.style.display = "block";
+        chatbots.style.display = "flex";
         tableIcon.src = "images/table1.svg";
         showHide = true;
     }
 })
 
+// letter filter static alphabet
 for(let i = 0 ; i <33 ; i++){
     let letterUl = document.createElement("ul");
     let letterLi = document.createElement("li");
