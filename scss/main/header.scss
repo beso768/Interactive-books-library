@@ -2,7 +2,7 @@ header{
     position: relative;
     background: $background;
     height: 64px;
-    padding:5px 3%;
+    padding: 5px 1.5% 5px 3%;
     @include  justify(space-between);
     .logo{
         position: relative;
@@ -18,7 +18,8 @@ header{
         }  
     }
     nav{
-        @include  d-flex(space-between,center,unset);
+        @include  justify(space-between);
+        margin-top: 7px;
         ul{
             @include  justify(space-between);
             li{
@@ -34,6 +35,7 @@ header{
                 &:last-child{
                     border:none;
                     min-width: fit-content;
+                    padding-right: 20px;
                 }
                 &:hover a{
                     background: white;
@@ -89,6 +91,7 @@ header{
             width: 318px;
             padding-top: 43px;
             transition: 0.5s;
+            margin: 0;
             ul{
                 flex-direction: column;
                 height: auto;

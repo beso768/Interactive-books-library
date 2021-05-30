@@ -4,13 +4,18 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- SEO meta tags -->
+    <meta name="desctiption" content="desctiption here">
+    <meta name="keywords" content="interactive books,library,chatbots">
+    <link rel="shortcut icon" href="./images/fav-icon.svg" type="image/x-icon">
 
     <!-- css -->
     <link rel="stylesheet" href="styles/style.css">
 
-    <title>Document</title>
+    <title>ბიბლიოთეკა</title>
 </head>
 <body>
+    <!-- ===header=== -->
     <header>
         <div class="logo">
             <img src="images/logo.svg" alt="logo">
@@ -29,6 +34,7 @@
                 <button type="submit" id="search-button"><img src="images/search.svg" alt="search"></button>
             </form>
         </nav>
+        <!-- ===mobile navbar=== -->
         <div id="mobile-nav">
             <div id="burger-icon">
                 <div class="bar1"></div>
@@ -50,13 +56,17 @@
             </nav>
         </div>
     </header>
+    <!-- ===section wrapper=== -->
     <section class="library-main-section">
+        <!-- ==filter section== -->
         <section class="filter-section">
+            <!-- ==radio select== -->
             <select name="winners" id="select-filter">
                 <option value="winners">გამარჯვებულები</option>
                 <option value="shortlist">შორთლისტი</option>
                 <option value="all">ყველა</option>
             </select>
+            <!-- === tags == -->
             <section class="tags">
                 <span>თეგები: </span>
                 <ul>
@@ -76,6 +86,7 @@
             <hr>
             <img src="images/table1.svg" alt="table" id="table-icon">
         </div>
+        <!-- ===books list === -->
         <section class="chatbots" id="library-chatbots">
             <div class="book-wrapper">
                 <a href="chatbot.html" class="book">
@@ -152,11 +163,15 @@
                     <h6>ჩეტბოტის სახელი</h6>
                 </a>
             </div>
-            <button><img src="images/add.svg" alt="add"></button>
+            <div class="button-wrapper">
+                <button><img src="images/add.svg" alt="add"></button>
+            </div>
         </section>
+        <!-- === letters filter=== -->
         <section class="letters-filter" id="lettersFilter">  
         </section>
     </section>
+    <!-- ==footer == -->
     <footer>
         <div class="social-web">
             <a href="#">

@@ -1,6 +1,6 @@
 .news-wrapper{
     @include section($background);
-    padding: 10px 3%;
+    padding: 3%;
     .tags{
         @include tags;
     }

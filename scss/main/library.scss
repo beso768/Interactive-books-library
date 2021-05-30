@@ -32,18 +32,22 @@
     }
     .chatbots{
         @include chatbot;
-        @include d-flex(center,center,column);
         padding-top: 3%;
         #sign{
             position: absolute;
             bottom: 68px;
             right: 10px;
         }
-        button{
-            background: $primary;
-            padding: 12px;
-            border: none;
-            cursor: pointer;
+        .button-wrapper{
+            @include justify(center);
+            width: 100%;
+            margin-top: 1%;
+            button{
+                background: $primary;
+                padding: 12px;
+                border: none;
+                cursor: pointer;
+            }
         }
     }
     .letters-filter{
