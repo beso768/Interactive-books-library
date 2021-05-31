@@ -328,15 +328,17 @@ header {
   font-size: 60px;
   color: #527178; }
   #user-section a {
-    width: 37%;
-    height: 180px;
+    width: 50%;
+    height: 222px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: unset;
     background: #527178;
     color: white;
-    margin-bottom: 5%; }
+    margin: 5%; 
+    text-align:center;
+  }
   #user-section h1 {
     text-align: center; }
 
@@ -711,6 +713,32 @@ header {
     z-index: 2;
     box-shadow: 0px 0px 30px -12px black; }
 
+footer {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  background: #527178;
+  padding: 1%; }
+  footer .social-web {
+    display: flex; }
+    footer .social-web .facebook {
+      display: flex;
+      flex-direction: column; }
+      footer .social-web .facebook a {
+        margin: 0 10px 10px 10px;
+        font-family: "Sandro-bold";
+        font-size: 22px;
+        color: white; }
+  footer .links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 400px; }
+    footer .links a:last-child img {
+      max-width: 290px;
+      width: 100%; }
+
 @media (max-width: 1470px) {
   header nav ul li a {
     font-size: 28px;
@@ -791,7 +819,9 @@ header {
   .links a:first-child {
     position: absolute;
     right: 12px;
-    top: 14px; } }
+    top: 14px; }
+  footer .links {
+    align-items: unset; } }
 
 @media (max-width: 540px) {
   header #mobile-nav #navbar {
@@ -808,12 +838,30 @@ header {
       top: 13px; }
   .chatbot-section {
     justify-content: unset; }
-    .chatbot-section .chatbot-wrapper {
-      border: none; }
-      .chatbot-section .chatbot-wrapper .info-section .image-side {
-        flex-wrap: wrap; }
-      .chatbot-section .chatbot-wrapper .links-section a {
-        font-size: 19px; } }
+    .chatbot-section .chat-bar-collapse {
+      bottom: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 13;
+      right: 0; }
+      .chatbot-section .chat-bar-collapse #messenger-button {
+        width: 110px;
+        height: 110px;
+        right: 10px;
+        bottom: 30px; }
+        .chatbot-section .chat-bar-collapse #messenger-button img {
+          width: 70%; }
+      .chatbot-section .chat-bar-collapse .content {
+        width: 100%;
+        height: 100%; }
+        .chatbot-section .chat-bar-collapse .content .chatbox {
+          height: 70%; }
+      .chatbot-section .chat-bar-collapse .chatbot-wrapper {
+        border: none; }
+        .chatbot-section .chat-bar-collapse .chatbot-wrapper .info-section .image-side {
+          flex-wrap: wrap; }
+        .chatbot-section .chat-bar-collapse .chatbot-wrapper .links-section a {
+          font-size: 19px; } }
 
 @media (max-width: 360px) {
   header .logo span {
@@ -821,30 +869,3 @@ header {
     font-size: 17px; }
   .about-main-section .nav-side-bar li a {
     font-size: 30px; } }
-
-footer {
-  display: flex;
-  justify-content: space-between;
-  position: relative;
-  background: #527178;
-  padding: 1%; }
-  footer .social-web {
-    display: flex; }
-    footer .social-web .facebook {
-      display: flex;
-      flex-direction: column; }
-      footer .social-web .facebook a {
-        margin: 0 10px 10px 10px;
-        font-family: "Sandro-bold";
-        font-size: 22px;
-        color: white; }
-  footer .links {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-direction: unset;
-    flex-wrap: wrap;
-    width: 400px; }
-    footer .links a:last-child img {
-      max-width: 290px;
-      width: 100%; }

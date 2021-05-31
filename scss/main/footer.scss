@@ -15,7 +15,9 @@ footer{
         }
     }
     .links{
-        @include d-flex(space-between,center,unset);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
         flex-wrap: wrap;
         width: 400px;
         a{

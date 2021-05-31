@@ -141,6 +141,9 @@
             top: 14px;
         }
     }
+    footer .links{
+        align-items: unset;
+    }
 }
 
 @media (max-width:540px){
@@ -164,21 +167,45 @@
             }
         }
     }
-
     // ==chatbot==
     .chatbot-section{
         justify-content: unset;
-        .chatbot-wrapper{
-            border: none;
-            .info-section{
-                .image-side{
-                    flex-wrap: wrap;
+        .chat-bar-collapse{
+            bottom: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 13;
+            right: 0;
+            #messenger-button{
+                width: 110px;
+                height: 110px;
+                right: 10px;
+                bottom: 30px;
+                img{
+                    width: 70%;
                 }
             }
-            .links-section a{
-                font-size: 19px;
+            .content{
+                width: 100%;
+                height: 100%;
+                .chatbox{
+                    height: 70%;
+                }   
             }
+            .chatbot-wrapper{
+                border: none;
+                .info-section{
+                    .image-side{
+                        flex-wrap: wrap;
+                    }
+                }
+                .links-section a{
+                    font-size: 19px;
+                }
+            }
+
         }
+
     }
 }
 
