@@ -4,8 +4,7 @@
     p{
         @include font($regular,28px,$primary);
         font-size: 28px;
-        padding-top: 1%;
-        line-height: 32px;
+        padding-top: 20px;
         a{
             @include font($bold,28px,$blue);
         }

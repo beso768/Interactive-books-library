@@ -18,7 +18,7 @@
         padding: 48px;
         h4{
             @include font($nino-mtavruli,32px,$primary);
-            margin-top: 3%;
+            padding-top: 15px;
             position: relative;
             &::before{
                 content: "";
@@ -27,13 +27,13 @@
                 height: 32px;
                 background: white;
                 position: absolute;
-                top: -4px;
+                top: 12px;
                 left: -48px;
             }
         }
         p{
             @include font($regular,22px,$primary);
-            margin: 2% 0;
+            margin-bottom: 30px;
         }
         h5{
             @include font($nino-mtavruli,22px,$primary);
