@@ -328,17 +328,15 @@ header {
   font-size: 60px;
   color: #527178; }
   #user-section a {
-    width: 50%;
-    height: 222px;
+    width: 37%;
+    height: 180px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: unset;
     background: #527178;
     color: white;
-    margin: 5%; 
-    text-align:center;
-  }
+    margin-bottom: 5%; }
   #user-section h1 {
     text-align: center; }
 
@@ -524,6 +522,59 @@ header {
         width: 100%;
         cursor: pointer;
         max-width: 290px; }
+
+.article-wrapper {
+  background: #EBEBEB;
+  margin-top: 60px;
+  padding: 3%; }
+  .article-wrapper h2 {
+    font-family: "BPG Nino Mtavruli";
+    font-size: 25px;
+    color: #527178; }
+  .article-wrapper .tags {
+    display: flex;
+    font-family: "Sandro-bold";
+    font-size: 24px;
+    color: #527178; }
+    .article-wrapper .tags span {
+      font-size: 30px; }
+    .article-wrapper .tags ul {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap; }
+      .article-wrapper .tags ul li {
+        cursor: pointer;
+        margin: 4px; }
+  .article-wrapper .main-section p {
+    font-family: "Sandro-regular";
+    font-size: 28px;
+    color: #527178;
+    margin: 2% 0; }
+  .article-wrapper .main-section .video {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: white;
+    width: 100%;
+    max-width: 1280px; }
+    .article-wrapper .main-section .video p {
+      font-family: "BPG Nino Mtavruli";
+      font-size: 42px;
+      color: #527178;
+      padding: 8% 11%;
+      text-align: center; }
+      @media (max-width: 680px) {
+        .article-wrapper .main-section .video p {
+          font-size: 30px; } }
+    .article-wrapper .main-section .video img {
+      width: 100%;
+      cursor: pointer;
+      max-width: 290px; }
 
 .about-main-section {
   margin-top: 60px;
@@ -787,6 +838,11 @@ footer {
   .news-wrapper .tags {
     flex-wrap: wrap;
     justify-content: center; }
+  .article-wrapper h2 {
+    text-align: center; }
+  .article-wrapper .tags {
+    flex-direction: column;
+    align-items: center; }
   .chatbot-section .chat-bar-collapse {
     bottom: 51px;
     width: 97%;

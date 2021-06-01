@@ -32,3 +32,24 @@
         }
     }
 }
+// ==article==
+.article-wrapper{
+    @include section($background);
+    padding: 3%;
+    h2{
+        @include font($nino-mtavruli,25px,$primary)
+    }
+    .tags{
+        @include tags;
+    }
+    .main-section{
+        p{
+            @include font($regular,28px,$primary);
+            margin: 2% 0;
+        }
+        .video{
+            @include d-flex(center,center,column);
+            @include video;
+        }
+    }
+}

@@ -87,6 +87,15 @@
             justify-content: center;
         }
     }
+    .article-wrapper{
+        h2{
+            text-align: center;
+        }
+        .tags{
+            flex-direction: column;
+            align-items: center;
+        }
+    }
     // ==chatbot===
     .chatbot-section {
         .chat-bar-collapse {
