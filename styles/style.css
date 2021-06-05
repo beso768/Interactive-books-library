@@ -672,15 +672,13 @@ header {
       .chatbot-section .chatbot-wrapper .links-section a {
         font-family: "Sandro-bold";
         font-size: 24px;
-        color: #527178;
+        color: #74888E;
         padding-bottom: 6px; }
       .chatbot-section .chatbot-wrapper .links-section .chatbot-link {
-        margin-top: 10px;
+        margin: 30px 0;
         display: flex;
         align-items: center;
         flex-wrap: wrap; }
-      .chatbot-section .chatbot-wrapper .links-section .facebook-buttons {
-        margin-top: 10px; }
   .chatbot-section h2 {
     font-family: "BPG Nino Mtavruli";
     font-size: 32px;
@@ -780,6 +778,8 @@ footer {
         font-family: "Sandro-bold";
         font-size: 22px;
         color: white; }
+    footer .social-web a {
+      margin-top: 5px; }
   footer .links {
     display: flex;
     justify-content: space-between;
@@ -845,16 +845,9 @@ footer {
     align-items: center; }
   .chatbot-section .chat-bar-collapse {
     bottom: 51px;
-    width: 97%;
-    height: 76%; }
+    width: 97%; }
     .chatbot-section .chat-bar-collapse .content {
-      width: 100%;
-      height: 100%; }
-      .chatbot-section .chat-bar-collapse .content .chatbox {
-        width: 100%;
-        height: 72%; }
-        .chatbot-section .chat-bar-collapse .content .chatbox #customer-msg {
-          top: 58px; }
+      width: 100%; }
   .chatbot-section .chatbot-wrapper .info-section {
     flex-wrap: wrap; }
     .chatbot-section .chatbot-wrapper .info-section .image-side {
@@ -894,30 +887,12 @@ footer {
       top: 13px; }
   .chatbot-section {
     justify-content: unset; }
-    .chatbot-section .chat-bar-collapse {
-      bottom: 0;
-      width: 100%;
-      height: 100%;
-      z-index: 13;
-      right: 0; }
-      .chatbot-section .chat-bar-collapse #messenger-button {
-        width: 110px;
-        height: 110px;
-        right: 10px;
-        bottom: 30px; }
-        .chatbot-section .chat-bar-collapse #messenger-button img {
-          width: 70%; }
-      .chatbot-section .chat-bar-collapse .content {
-        width: 100%;
-        height: 100%; }
-        .chatbot-section .chat-bar-collapse .content .chatbox {
-          height: 70%; }
-      .chatbot-section .chat-bar-collapse .chatbot-wrapper {
-        border: none; }
-        .chatbot-section .chat-bar-collapse .chatbot-wrapper .info-section .image-side {
-          flex-wrap: wrap; }
-        .chatbot-section .chat-bar-collapse .chatbot-wrapper .links-section a {
-          font-size: 19px; } }
+    .chatbot-section .chatbot-wrapper .info-section .image-side {
+      flex-wrap: wrap; }
+    .chatbot-section .chatbot-wrapper .links-section a {
+      font-size: 19px; }
+    .chatbot-section .chatbot-wrapper .statistics-section p, .chatbot-section .chatbot-wrapper span {
+      font-size: 19px; } }
 
 @media (max-width: 360px) {
   header .logo span {

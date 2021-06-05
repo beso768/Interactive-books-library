@@ -41,17 +41,14 @@
         .links-section{
             margin-top: 2%;
             a{
-                @include font($bold,24px,$primary);
+                @include font($bold,24px,#74888E);
                 padding-bottom: 6px;
             }
             .chatbot-link{
-                margin-top: 10px;
+                margin: 30px 0;
                 display: flex;
                 align-items: center;
                 flex-wrap: wrap;
-            }
-            .facebook-buttons{
-                margin-top: 10px;
             }
         }
     }

@@ -101,17 +101,8 @@
         .chat-bar-collapse {
             bottom: 51px;
             width: 97%;
-            height: 76%;
             .content{
                 width: 100%;
-                height: 100%;
-                .chatbox{
-                    width: 100%;
-                    height: 72%;
-                    #customer-msg{
-                        top: 58px;
-                    }
-                }
             }
         }
         .chatbot-wrapper{
@@ -179,41 +170,27 @@
     // ==chatbot==
     .chatbot-section{
         justify-content: unset;
-        .chat-bar-collapse{
-            bottom: 0;
-            width: 100%;
-            height: 100%;
-            z-index: 13;
-            right: 0;
-            #messenger-button{
-                width: 110px;
-                height: 110px;
-                right: 10px;
-                bottom: 30px;
-                img{
-                    width: 70%;
+        // h2{
+        //     text-align: center;
+        // }
+        .chatbot-wrapper{
+            .info-section{
+                .image-side{
+                    flex-wrap: wrap;
+                    // justify-content: center;
+                    // img{
+                    //     margin: 0;
+                    // }
                 }
             }
-            .content{
-                width: 100%;
-                height: 100%;
-                .chatbox{
-                    height: 70%;
-                }   
+            .links-section a{
+                font-size: 19px;
             }
-            .chatbot-wrapper{
-                border: none;
-                .info-section{
-                    .image-side{
-                        flex-wrap: wrap;
-                    }
-                }
-                .links-section a{
-                    font-size: 19px;
-                }
+            .statistics-section p ,span{
+                font-size: 19px;
             }
-
         }
+
 
     }
 }

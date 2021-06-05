@@ -13,6 +13,9 @@ footer{
                 @include font($bold,22px,white);
             }
         }
+        a{
+            margin-top: 5px;
+        }
     }
     .links{
         display: flex;
