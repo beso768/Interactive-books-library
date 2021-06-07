@@ -103,7 +103,7 @@
     </style>
 
 </head>
-<body hidden>
+<body>
     <header>
         <a href="index.html" class="logo">
             <img src="images/logo.svg" alt="logo">
@@ -160,11 +160,12 @@
                     <p id="chatbot-url" onclick="copyElementText(this.id)">დაკოპირება</p>
                 </div>
                 <div class="facebook-buttons">
-                    <iframe id="fb-like" src="https://www.facebook.com/plugins/like.php?href=fbtesturl&width=108&layout=button&action=like&size=large&share=false&height=21&appId" width="108" height="40" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
-                    <iframe id="fb-share" src="https://www.facebook.com/plugins/share_button.php?href=fbtesturl&layout=button&size=large&width=88&height=28&appId" width="120" height="40" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+                    <iframe id="fb-like" src="https://www.facebook.com/plugins/like.php?href=http://iel.iliauni.edu.ge/&width=108&layout=button&action=like&size=large&share=false&height=21&appId" width="108" height="40" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+                    <iframe id="fb-share" src="https://www.facebook.com/plugins/share_button.php?href=http://iel.iliauni.edu.ge/&layout=button&size=large&width=88&height=28&appId" width="120" height="40" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
                 </div>
             </section>
             <div class="chatbot__container">
+              <iframe id="chatbotIframe" src="https://animachatbotics.com/Scripts/bot-MBD/bot/index3.html?botId=2305&tone=0" style="width: 100%; height: 100%; display: none;" frameborder="0"></iframe>
               <div class="chatbot__btn">
                   <div class="chatbot__open__btn"></div>
               </div>
@@ -238,70 +239,6 @@
     <script type="text/javascript">
 
 
-    //ჩეთბოტის ინფორმაციის ჩატვირთვა
-
-		var url = window.location.href;
-
-    if(/^\d+$/.test(url.substring(url.lastIndexOf("?") + 1,url.lastIndexOf("&"))))
-    {
-       	var chatbot_id = url.substring(url.lastIndexOf("?") + 1,url.lastIndexOf("&")).trim();
-
-        $(".chatbot__container").prepend('<iframe id="chatbotIframe" src="https://animachatbotics.com/Scripts/bot-MBD/bot/index3.html?botId=' + chatbot_id + '&tone=0" style="width: 100%; height: 100%; display: none;" frameborder="0"></iframe>');
-        $("#fb-like").attr("src", $("#fb-like").attr("src").replace("fbtesturl", url));
-        $("#fb-share").attr("src", $("#fb-share").attr("src").replace("fbtesturl", url));
-
-        var settings = {
-          "url": "https://animachatbotics.com/ka/Home/IliauniChatbotDetails/" + chatbot_id,
-          "method": "GET",
-          "timeout": 0,
-        };
-
-        $.ajax(settings)
-        .done(function (response) {
-
-          var data = response.Data;
-
-          var name = data.name;
-          var image = data.image;
-          var description = data.description;
-          var botNodes = data.botNodes;
-          var dialogs = data.dialogs;
-          var team = data.team;
-
-          // კონტენტის შეცვლა
-          $("#chatbot-name").text(name);
-          $("#chatbot-image").attr("src", image);
-          $("#chatbot-image").attr("alt", name);
-          $("#chatbot-description").text(description);
-          $("#chatbot-botNodes").text(botNodes);
-          $("#chatbot-dialogs").text(dialogs);
-          $("#chatbot-url").text(url.substring(0, url.lastIndexOf("&")+1));
-
-
-          $.each(team, function( index, value ) {
-            $("#authors").append("<p>" + value + "</p>")
-          });
-
-
-          // og თეგების შეცვლა
-          $('meta[property="og:title"]').attr('content', name);
-          $('meta[property="og:url"]').attr('content', url);
-          $('meta[property="og:image"]').attr('content', image);
-
-          $("body").show();
-
-        })
-        .fail(function (response) {
-           window.location.href = "https://iel.iliauni.edu.ge/";
-        });
-
-    }
-    else {
-       window.location.href = "https://iel.iliauni.edu.ge/";
-    }
-
-
-
     // ჩეთის ფანჯრის გახსნა
     document.querySelector('.chatbot__btn').addEventListener('click', (e) => {
             let child = e.target.querySelector('div');
@@ -317,16 +254,7 @@
         });
 
 
-    function copyElementText(id) {
-        var text = document.getElementById(id).innerText;
-        var elem = document.createElement("textarea");
-        document.body.appendChild(elem);
-        elem.value = text;
-        elem.select();
-        document.execCommand("copy");
-        document.body.removeChild(elem);
-        alert("ლინკი დაკოპირებულია")
-    }
+
 
 
 	</script>
