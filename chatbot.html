@@ -25,7 +25,17 @@
 
         .chatbot-wrapper {
           width: 100%;
+          position: relative;
         }
+
+        #chatbot-url {
+          font-family: "Sandro-bold";
+          font-size: 24px;
+          color: #74888E;
+          padding-bottom: 10px;
+        }
+
+
 
         .chatbot-section .chatbot-wrapper .info-section {
           justify-content: left;
@@ -92,7 +102,7 @@
     </style>
 
 </head>
-<body>
+<body hidden>
     <header>
         <a href="index.html" class="logo">
             <img src="images/logo.svg" alt="logo">
@@ -130,12 +140,8 @@
             <section class="info-section">
                 <div class="image-side">
                     <img id="chatbot-image" src="images/background-img.svg" alt="chatbot-img">
-                    <div class="group-members">
+                    <div class="group-members" id="authors">
                         <h4>გუნდის წევრები</h4>
-                        <p>სახელი გვარი</p>
-                        <p>სახელი გვარი</p>
-                        <p>სახელი გვარი</p>
-                        <p>სახელი გვარი</p>
                     </div>
                 </div>
                 <div class="text-side">
@@ -150,13 +156,20 @@
             <section class="links-section">
                 <div class="chatbot-link">
                     <h4>ლინკი: &nbsp</h4>
-                    <a href="https://iel.iliauni.edu.ge/chatbot.html" id="chatbot-url">https://iel.iliauni.edu.ge/chatbot.html</a>
+                    <p id="chatbot-url" onclick="copyElementText(this.id)">დაკოპირება</p>
                 </div>
                 <div class="facebook-buttons">
                     <iframe id="fb-like" src="https://www.facebook.com/plugins/like.php?href=fbtesturl&width=108&layout=button_count&action=like&size=large&share=false&height=21&appId" width="108" height="40" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
                     <iframe id="fb-share" src="https://www.facebook.com/plugins/share_button.php?href=fbtesturl&layout=button_count&size=large&width=88&height=28&appId" width="120" height="40" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+                </div>
             </section>
+            <div class="chatbot__container">
+              <div class="chatbot__btn">
+                  <div class="chatbot__open__btn"></div>
+              </div>
+            </div>
         </div>
+
 
         <!-- chatbot-messenger -->
         <!-- <div class="chat-bar-collapse">
@@ -179,12 +192,7 @@
                 </form>
             </div>
         </div> -->
-        <div class="chatbot__container">
-          <div class="chatbot__btn">
-              <div class="chatbot__open__btn"></div>
-          </div>
 
-        </div>
 
     </section>
 
@@ -214,6 +222,9 @@
         </div>
     </footer>
 
+
+
+
     <!-- javascript -->
     <script src="js/chatbot.js"></script>
     <script src="js/main.js"></script>
@@ -226,12 +237,13 @@
     <script type="text/javascript">
 
 
+    //ჩეთბოტის ინფორმაციის ჩატვირთვა
 
 		var url = window.location.href;
 
-    if(/^\d+$/.test(url.split("#")[1]))
+    if(/^\d+$/.test(url.substring(url.lastIndexOf("?") + 1,url.lastIndexOf("&"))))
     {
-       	var chatbot_id = url.split("#")[1].trim();
+       	var chatbot_id = url.substring(url.lastIndexOf("?") + 1,url.lastIndexOf("&")).trim();
 
         $(".chatbot__container").prepend('<iframe id="chatbotIframe" src="https://animachatbotics.com/Scripts/bot-MBD/bot/index3.html?botId=' + chatbot_id + '&tone=0" style="width: 100%; height: 100%; display: none;" frameborder="0"></iframe>');
         $("#fb-like").attr("src", $("#fb-like").attr("src").replace("fbtesturl", url));
@@ -262,13 +274,20 @@
           $("#chatbot-description").text(description);
           $("#chatbot-botNodes").text(botNodes);
           $("#chatbot-dialogs").text(dialogs);
-          $("#chatbot-url").text(url);
-          $("#chatbot-url").attr("href", url);
+          $("#chatbot-url").text(url.substring(0, url.lastIndexOf("&")+1));
+
+
+          $.each(team, function( index, value ) {
+            $("#authors").append("<p>" + value + "</p>")
+          });
+
 
           // og თეგების შეცვლა
           $('meta[property="og:title"]').attr('content', name);
           $('meta[property="og:url"]').attr('content', url);
           $('meta[property="og:image"]').attr('content', image);
+
+          $("body").show();
 
         })
         .fail(function (response) {
@@ -281,6 +300,8 @@
     }
 
 
+
+    // ჩეთის ფანჯრის გახსნა
     document.querySelector('.chatbot__btn').addEventListener('click', (e) => {
             let child = e.target.querySelector('div');
 
@@ -293,6 +314,19 @@
                 document.getElementById('chatbotIframe').setAttribute('style', 'display: none')
             }
         });
+
+
+    function copyElementText(id) {
+        var text = document.getElementById(id).innerText;
+        var elem = document.createElement("textarea");
+        document.body.appendChild(elem);
+        elem.value = text;
+        elem.select();
+        document.execCommand("copy");
+        document.body.removeChild(elem);
+        alert("ლინკი დაკოპირებულია")
+    }
+
 
 	</script>
 
