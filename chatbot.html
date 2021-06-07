@@ -19,6 +19,78 @@
     <link rel="stylesheet" href="styles/style.css">
 
     <title>ინტერაქტიული წიგნების ბიბლიოთეკა</title>
+
+
+    <style media="screen">
+
+        .chatbot-wrapper {
+          width: 100%;
+        }
+
+        .chatbot-section .chatbot-wrapper .info-section {
+          justify-content: left;
+        }
+
+        .chatbot__container {
+            bottom: 70px;
+            right: 70px;
+            /*bottom: 11vh;*/
+            position: absolute;
+            /*right: 15%;*/
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            z-index: 9999;
+        }
+
+
+        .chatbot__btn {
+            background: url('https://animachatbotics.com/Scripts/Vue-chatBot/img/botBox.png') no-repeat center;
+            background-size: cover;
+            position: relative;
+            height: 10vh;
+            width: 10vh;
+            max-height: 80px;
+            max-width: 80px;
+            min-height: 60px;
+            min-width: 60px;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+            cursor: pointer;
+        }
+
+            .chatbot__btn::after {
+                position: absolute;
+                content: '';
+                left: 0;
+                top: 0;
+                right: 0;
+                bottom: 0;
+            }
+
+        .chatbot__open__btn {
+            background: url('https://animachatbotics.com/Scripts/Vue-chatBot/img/chat.png') no-repeat center;
+            background-size: contain;
+            height: 30px;
+            width: 30px;
+        }
+
+        .chatbot__close__btn {
+            background: url('https://animachatbotics.com/Scripts/Vue-chatBot/img/close.svg') no-repeat center;
+            background-size: contain;
+            height: 18px;
+            width: 18px;
+        }
+
+    </style>
+
 </head>
 <body>
     <header>
@@ -54,10 +126,10 @@
     </header>
     <section class="chatbot-section">
         <div class="chatbot-wrapper">
-            <h2>ჩეტბოტის სახელი</h2>
+            <h2 id="chatbot-name">ჩეტბოტის სახელი</h2>
             <section class="info-section">
                 <div class="image-side">
-                    <img src="images/background-img.svg" alt="chatbot-img">
+                    <img id="chatbot-image" src="images/background-img.svg" alt="chatbot-img">
                     <div class="group-members">
                         <h4>გუნდის წევრები</h4>
                         <p>სახელი გვარი</p>
@@ -67,27 +139,27 @@
                     </div>
                 </div>
                 <div class="text-side">
-                    <p>პროექტის მოკლე აღწერა პროექტის მოკლე აღწერა პროექტის მოკლე აღწერა პროექტის მოკლე აღწერა პროექტის მოკლე აღწერა პროექტის მოკლე აღწერა პროექტის მოკლე აღწერა პროექტის მოკლე აღწერა პროექტის მოკლე აღწერა პროექტის მოკლე აღწერა პროექტის მოკლე აღწერა პროექტის მოკლე აღწერა პროექტის მოკლე აღწერა პროექტის მოკლე აღწერა პროექტის მოკლე აღწერა პროექტის მოკლე აღწერა პროექტის მოკლე აღწერა პროექტის მოკლე აღწერა პროექტის მოკლე აღწერა პროექტის მოკლე აღწერა პროექტის მოკლე აღწერა პროექტის მოკლე აღწერა პროექტის მოკლე აღწერა პროექტის მოკლე აღწერა პროექტის მოკლე აღწერა პროექტის მოკლე აღწერა პროექტის მოკლე აღწერა პროექტის მოკლე აღწერა პროექტის მოკლე აღწერა პროექტის მოკლე აღწერა პროექტის მოკლე აღწერა პროექტის მოკლე აღწერა პროექტის მოკლე აღწერა პროექტის მოკლე აღწერა პროექტის მოკლე აღწერა პროექტის მოკლე აღწერა პროექტის მოკლე</p>
+                    <p id="chatbot-description">პროექტის მოკლე აღწერა პროექტის მოკლე აღწერა პროექტის მოკლე აღწერა პროექტის მოკლე აღწერა პროექტის მოკლე აღწერა პროექტის მოკლე აღწერა პროექტის მოკლე აღწერა პროექტის მოკლე აღწერა პროექტის მოკლე აღწერა პროექტის მოკლე აღწერა პროექტის მოკლე აღწერა პროექტის მოკლე აღწერა პროექტის მოკლე აღწერა პროექტის მოკლე აღწერა პროექტის მოკლე აღწერა პროექტის მოკლე აღწერა პროექტის მოკლე აღწერა პროექტის მოკლე აღწერა პროექტის მოკლე აღწერა პროექტის მოკლე აღწერა პროექტის მოკლე აღწერა პროექტის მოკლე აღწერა პროექტის მოკლე აღწერა პროექტის მოკლე აღწერა პროექტის მოკლე აღწერა პროექტის მოკლე აღწერა პროექტის მოკლე აღწერა პროექტის მოკლე აღწერა პროექტის მოკლე აღწერა პროექტის მოკლე აღწერა პროექტის მოკლე აღწერა პროექტის მოკლე აღწერა პროექტის მოკლე აღწერა პროექტის მოკლე აღწერა პროექტის მოკლე აღწერა პროექტის მოკლე აღწერა პროექტის მოკლე</p>
                 </div>
             </section>
             <section class="statistics-section">
                 <h4>სტატისტიკა</h4>
-                <p id="dialogue">დიალოგი: <span>450</span> </p>
-                <p id="answers">პასუხები: <span>350</span> </p>
-              
+                <p>დიალოგი: <span id="chatbot-dialogs">450</span> </p>
+                <p>პასუხები: <span id="chatbot-botNodes">350</span> </p>
             </section>
             <section class="links-section">
                 <div class="chatbot-link">
                     <h4>ლინკი: &nbsp</h4>
-                    <a href="#">https://www.google.com/maps/embed</a>
+                    <a href="https://iel.iliauni.edu.ge/chatbot.html" id="chatbot-url">https://iel.iliauni.edu.ge/chatbot.html</a>
                 </div>
                 <div class="facebook-buttons">
-                    <iframe src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fbeso768.github.io%2FInteractive-books-library%2Fchatbot.html&width=108&layout=button_count&action=like&size=large&share=false&height=21&appId" width="108" height="40" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
-                    <iframe src="https://www.facebook.com/plugins/share_button.php?href=https%3A%2F%2Fbeso768.github.io%2FInteractive-books-library%2Fchatbot.html&layout=button_count&size=large&width=88&height=28&appId" width="120" height="40" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+                    <iframe id="fb-like" src="https://www.facebook.com/plugins/like.php?href=fbtesturl&width=108&layout=button_count&action=like&size=large&share=false&height=21&appId" width="108" height="40" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+                    <iframe id="fb-share" src="https://www.facebook.com/plugins/share_button.php?href=fbtesturl&layout=button_count&size=large&width=88&height=28&appId" width="120" height="40" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
             </section>
         </div>
+
         <!-- chatbot-messenger -->
-        <div class="chat-bar-collapse">
+        <!-- <div class="chat-bar-collapse">
             <div id="messenger-button">
                 <img src="images/chatbot-icon.svg" alt="chatbot-messenger">
             </div>
@@ -106,6 +178,12 @@
                     <button type="submit"> <img src="images/send.svg" alt="send"></button>
                 </form>
             </div>
+        </div> -->
+        <div class="chatbot__container">
+          <div class="chatbot__btn">
+              <div class="chatbot__open__btn"></div>
+          </div>
+
         </div>
 
     </section>
@@ -139,5 +217,86 @@
     <!-- javascript -->
     <script src="js/chatbot.js"></script>
     <script src="js/main.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+
+
+
+    <script type="text/javascript">
+
+
+
+		var url = window.location.href;
+
+    if(/^\d+$/.test(url.split("#")[1]))
+    {
+       	var chatbot_id = url.split("#")[1].trim();
+
+        $(".chatbot__container").prepend('<iframe id="chatbotIframe" src="https://animachatbotics.com/Scripts/bot-MBD/bot/index3.html?botId=' + chatbot_id + '&tone=0" style="width: 100%; height: 100%; display: none;" frameborder="0"></iframe>');
+        $("#fb-like").attr("src", $("#fb-like").attr("src").replace("fbtesturl", url));
+        $("#fb-share").attr("src", $("#fb-share").attr("src").replace("fbtesturl", url));
+
+        var settings = {
+          "url": "https://animachatbotics.com/ka/Home/IliauniChatbotDetails/" + chatbot_id,
+          "method": "GET",
+          "timeout": 0,
+        };
+
+        $.ajax(settings)
+        .done(function (response) {
+
+          var data = response.Data;
+
+          var name = data.name;
+          var image = data.image;
+          var description = data.description;
+          var botNodes = data.botNodes;
+          var dialogs = data.dialogs;
+          var team = data.team;
+
+          // კონტენტის შეცვლა
+          $("#chatbot-name").text(name);
+          $("#chatbot-image").attr("src", image);
+          $("#chatbot-image").attr("alt", name);
+          $("#chatbot-description").text(description);
+          $("#chatbot-botNodes").text(botNodes);
+          $("#chatbot-dialogs").text(dialogs);
+          $("#chatbot-url").text(url);
+          $("#chatbot-url").attr("href", url);
+
+          // og თეგების შეცვლა
+          $('meta[property="og:title"]').attr('content', name);
+          $('meta[property="og:url"]').attr('content', url);
+          $('meta[property="og:image"]').attr('content', image);
+
+        })
+        .fail(function (response) {
+           window.location.href = "https://iel.iliauni.edu.ge/";
+        });
+
+    }
+    else {
+       window.location.href = "https://iel.iliauni.edu.ge/";
+    }
+
+
+    document.querySelector('.chatbot__btn').addEventListener('click', (e) => {
+            let child = e.target.querySelector('div');
+
+            if (child.className == "chatbot__open__btn") {
+                child.className = "chatbot__close__btn"
+                document.getElementById('chatbotIframe').setAttribute('style', 'display: block; width: 370px;height: 480px;')
+
+            } else {
+                child.className = "chatbot__open__btn"
+                document.getElementById('chatbotIframe').setAttribute('style', 'display: none')
+            }
+        });
+
+	</script>
+
+
+
 </body>
 </html>
