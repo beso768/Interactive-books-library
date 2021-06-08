@@ -23,6 +23,68 @@
 
     <style media="screen">
 
+        /* დასამატებელი სტილები  */
+        #chatBot {
+            bottom: 2px;
+            position: absolute;
+            right: 2px;
+            width: 100%;
+            height: 100%;
+        }
+
+        #chatBot .chat_converse {
+            position: relative;
+            background: #fff;
+            height: 260px;
+            min-height: 0;
+            line-height: 18px;
+            overflow-y: auto;
+            width: 450px;
+            left: 35px;
+            top: 60px;
+            border: 1px solid #74888E;
+        }
+
+        #chatBot .chat_header .head_line {
+            position: absolute;
+            bottom: 0;
+            width: 90%;
+            height: 1px;
+            background-color: #707070;
+            z-index: 999;
+        }
+
+        #chatBot .chat {
+            /* position: fixed; */
+            right: 78px;
+            bottom: 7.8vh;
+            /* margin-top: 25px; */
+        }
+
+        #chatBot #formData {
+            width: 88%;
+            position: absolute;
+            bottom: 64px;
+            left: 36px;
+            padding-bottom: 10px;
+            background: white;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            border: 1px solid #74888E;
+            padding: 0;
+        }
+
+        #chatBot #formData input {
+            width: 84%;
+            padding: 9px;
+            font-family: 'DejaVuSans';
+            font-size: 14px;
+        }
+        /* ======== */
         .chatbot-wrapper {
           width: 100%;
           position: relative;
@@ -54,15 +116,13 @@
             z-index: 9999;
         }
 
-
+/* 
         .chatbot__btn {
-            background: url('https://animachatbotics.com/Scripts/Vue-chatBot/img/botBox.png') no-repeat center;
-            background-size: cover;
             position: relative;
-            height: 10vh;
-            width: 10vh;
-            max-height: 80px;
-            max-width: 80px;
+            height: 14vh;
+            width: 14vh;
+            max-height: 120px;
+            max-width: 120px;
             min-height: 60px;
             min-width: 60px;
             display: -webkit-box;
@@ -75,7 +135,7 @@
             -ms-flex-pack: center;
             justify-content: center;
             cursor: pointer;
-        }
+        } */
 
             .chatbot__btn::after {
                 position: absolute;
@@ -86,20 +146,42 @@
                 bottom: 0;
             }
 
-        .chatbot__open__btn {
-            background: url('https://animachatbotics.com/Scripts/Vue-chatBot/img/chat.png') no-repeat center;
-            background-size: contain;
-            height: 30px;
-            width: 30px;
-        }
+            #chatbot__open__btn {
+                position: absolute;
+                background: url('./images/chatbotIcon.svg') no-repeat center;
+                background-size: contain;
+                height: 120px;
+                width: 120px;
+                cursor: pointer;
+                top: -54px;
+            }
 
-        .chatbot__close__btn {
-            background: url('https://animachatbotics.com/Scripts/Vue-chatBot/img/close.svg') no-repeat center;
-            background-size: contain;
-            height: 18px;
-            width: 18px;
+        #chatbot__close__btn {
+            display: none;
+            position: absolute;
+            background: url(./images/close.svg) no-repeat center;
+            background-size: cover;
+            height: 28px;
+            width: 28px;
+            z-index: 3;
+            cursor: pointer;
+            bottom: 318px;
+            right: 38px;
         }
-
+        #chatbotIframe{
+            display: none;
+            width: 510px;
+            height: 450px;
+            position: absolute;
+            bottom: -54px;
+            right: 0;
+        }
+        #chatbotIframe .chat{
+            border-radius: 0;
+        }
+        .chatbot__container{
+            position: relative;
+        }
     </style>
 
 </head>
@@ -165,10 +247,9 @@
                 </div>
             </section>
             <div class="chatbot__container">
-              <iframe id="chatbotIframe" src="https://animachatbotics.com/Scripts/bot-MBD/bot/index3.html?botId=2305&tone=0" style="width: 100%; height: 100%; display: none;" frameborder="0"></iframe>
-              <div class="chatbot__btn">
-                  <div class="chatbot__open__btn"></div>
-              </div>
+              <iframe id="chatbotIframe" src="https://animachatbotics.com/Scripts/bot-MBD/bot/index3.html?botId=2305&tone=0" frameborder="0"></iframe>
+                  <div id="chatbot__open__btn"></div>
+                  <div id="chatbot__close__btn"></div>
             </div>
         </div>
 
@@ -240,20 +321,41 @@
 
 
     // ჩეთის ფანჯრის გახსნა
-    document.querySelector('.chatbot__btn').addEventListener('click', (e) => {
-            let child = e.target.querySelector('div');
+    // document.querySelector('.chatbot__btn').addEventListener('click', (e) => {
+    //         let child = e.target.querySelector('div');
 
-            if (child.className == "chatbot__open__btn") {
-                child.className = "chatbot__close__btn"
-                document.getElementById('chatbotIframe').setAttribute('style', 'display: block; width: 370px;height: 480px;')
+    //         if (child.className == "chatbot__open__btn") {
+    //             child.className = "chatbot__close__btn"
+    //             document.getElementById('chatbotIframe').setAttribute('style', 'display: block; width: 370px;height: 480px;')
 
-            } else {
-                child.className = "chatbot__open__btn"
-                document.getElementById('chatbotIframe').setAttribute('style', 'display: none')
-            }
+    //         } else {
+    //             child.className = "chatbot__open__btn"
+    //             document.getElementById('chatbotIframe').setAttribute('style', 'display: none')
+    //         }
+    //     });
+
+        const messengerBtn = document.getElementById("chatbot__open__btn");
+        const closeBtn = document.getElementById("chatbot__close__btn");
+        const content = document.getElementById('chatbotIframe');
+        // close/open messenger content 
+        messengerBtn.addEventListener("click",function(){
+            content.setAttribute('style', 'display: block; width: 370px;height: 480px;')
+            messengerBtn.style.display = "none";
+            closeBtn.style.display = "block";
+        });
+        closeBtn.addEventListener("click",function(){
+            closeBtn.style.display = "none";
+            content.setAttribute('style', 'display: none')
+            messengerBtn.style.display = "block";
         });
 
 
+        window.onload = function() {
+            let myiFrame = document.querySelector("#chatbotIframe");
+            let doc = myiFrame.contentWindow;
+            console.log(myiFrame.contentWindow);
+            doc.body.innerHTML = doc.body.innerHTML + '<style> .chat_position{border-radius: 0;}</style>';
+        }
 
 
 
