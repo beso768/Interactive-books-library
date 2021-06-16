@@ -160,8 +160,8 @@
                     <p id="chatbot-url" onclick="copyElementText(this.id)">დაკოპირება</p>
                 </div>
                 <div class="facebook-buttons">
-                    <iframe id="fb-like" src="https://www.facebook.com/plugins/like.php?href=fbtesturl&width=108&layout=button&action=like&size=large&share=false&height=21&appId" width="108" height="40" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
-                    <iframe id="fb-share" src="https://www.facebook.com/plugins/share_button.php?href=fbtesturl&layout=button&size=large&width=88&height=28&appId" width="120" height="40" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+                    <!-- <iframe id="fb-like" src="https://www.facebook.com/plugins/like.php?href=fbtesturl&width=108&layout=button&action=like&size=large&share=false&height=21&appId" width="108" height="40" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+                    <iframe id="fb-share" src="https://www.facebook.com/plugins/share_button.php?href=fbtesturl&layout=button&size=large&width=88&height=28&appId" width="120" height="40" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe> -->
                 </div>
             </section>
             <div class="chatbot__container">
@@ -247,8 +247,18 @@
        	var chatbot_id = url.substring(url.lastIndexOf("?") + 1,url.lastIndexOf("&")).trim();
 
         $(".chatbot__container").prepend('<iframe id="chatbotIframe" src="https://animachatbotics.com/Scripts/bot-MBD/bot/index3.html?botId=' + chatbot_id + '&tone=0" style="width: 100%; height: 100%; display: none;" frameborder="0"></iframe>');
-        $("#fb-like").attr("src", $("#fb-like").attr("src").replace("fbtesturl", url));
-        $("#fb-share").attr("src", $("#fb-share").attr("src").replace("fbtesturl", url));
+
+
+        $(".facebook-buttons").append('  <iframe id="fb-like" src="https://www.facebook.com/plugins/like.php?href=' + url + '&width=108&layout=button&action=like&size=large&share=false&height=21&appId" width="108" height="40" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>');
+
+        $(".facebook-buttons").append('   <iframe id="fb-share" src="https://www.facebook.com/plugins/share_button.php?href=' + url + '&layout=button&size=large&width=88&height=28&appId" width="120" height="40" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>');
+
+
+
+
+
+        //$("#fb-like").attr("src", $("#fb-like").attr("src").replace("fbtesturl", url));
+        //$("#fb-share").attr("src", $("#fb-share").attr("src").replace("fbtesturl", url));
 
         var settings = {
           "url": "https://animachatbotics.com/ka/Home/IliauniChatbotDetails/" + chatbot_id,
