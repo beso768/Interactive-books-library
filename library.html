@@ -15,33 +15,177 @@
     <meta property="og:description"        content="ინტერაქტიული წიგნების ბიბლიოთეკა" />
     <meta property="og:image"              content="https://iel.iliauni.edu.ge/images/logo.png" />
 
-
     <!-- css -->
     <link rel="stylesheet" href="styles/style.css">
 
     <title>ინტერაქტიული წიგნების ბიბლიოთეკა</title>
+</head>
+<body hidden>
+    <!-- ===header=== -->
+    <header>
+        <a href="index.html" class="logo">
+            <img src="images/logo.svg" alt="logo">
+            <span>ინტერაქტიული წიგნების ბიბლიოთეკა</span>
+        </a>
+        <nav>
+            <ul>
+                <li><a href="index.html">მთავარი</a></li>
+                <li><a href="library.html">ბიბლიოთეკა</a></li>
+                <!-- <li><a href="news.html">სიახლეები</a></li> -->
+                <li><a href="about.html">პროექტის შესახებ</a></li>
+            </ul>
+            <a href="https://animachatbotics.com/ka/Account/IELIliauni" target="_blank"> <img src="images/user.svg" alt="user"> </a>
+            <!-- <form action="">
+                <input type="search" name="search" id="site-search">
+                <button type="submit" id="search-button"><img src="images/search.svg" alt="search"></button>
+            </form> -->
+        </nav>
+        <!-- ===mobile navbar=== -->
+        <div id="mobile-nav">
+            <div id="burger-icon">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+            </div>
+            <nav id="navbar">
+                <ul>
+                    <li><a href="index.html">მთავარი</a></li>
+                    <li><a href="library.html">ბიბლიოთეკა</a></li>
+                    <!-- <li><a href="news.html">სიახლეები</a></li> -->
+                    <li><a href="about.html">პროექტის შესახებ</a></li>
+                </ul>
+                <a href="https://animachatbotics.com/ka/Account/IELIliauni" target="_blank"> <img src="images/user.svg" alt="user"> </a>
+                <form action="">
+                    <input type="search" name="search" id="site-search">
+                    <button type="submit" id="search-button"><img src="images/search.svg" alt="search"></button>
+                </form>
+            </nav>
+        </div>
+    </header>
+    <!-- ===section wrapper=== -->
+    <section class="library-main-section">
+        <!-- ==filter section== -->
+            <!-- <section class="filter-section">
 
+            <select name="winners" id="select-filter">
+                <option value="winners">გამარჯვებულები</option>
+                <option value="shortlist">შორთლისტი</option>
+                <option value="all">ყველა</option>
+            </select>
 
-    <style media="screen">
-    #user-section a {
-  width: 50%;
-  height: 222px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: unset;
-  background: #527178;
-  color: white;
-  margin: 5%;
-  text-align: center;
-}
-    </style>
+            <section class="tags">
+                <span>თეგები: </span>
+                <ul>
+                    <li>სახელი გვარი(4),</li>
+                    <li>შორთლისტი(3),</li>
+                    <li>თეგები(2),</li>
+                    <li>თეგები(2),</li>
+                    <li>თეგები(2),</li>
+                    <li>თეგები(2),</li>
+                    <li>თეგები(2),</li>
+                    <li>თეგები(2),</li>
+                    <li>თეგები(2)</li>
+                </ul>
+            </section>
+        </section> -->
+        <!-- <div class="divide">
+            <hr>
+            <img src="images/table1.svg" alt="table" id="table-icon">
+        </div> -->
+        <!-- ===books list === -->
+        <section class="chatbots" id="library-chatbots">
+            <div class="book-wrapper">
 
-
-<body>
-    <section id="user-section">
-        <h1>გვერდი მზადდება</h1>
-        <a href="index.html">მთავარ გვერდზე დაბრუნება</a>
+            </div>
+            <div class="button-wrapper">
+                <button><img src="images/add.svg" alt="add"></button>
+            </div>
+        </section>
+        <!-- === letters filter=== -->
+        <section class="letters-filter" id="lettersFilter">
+        </section>
     </section>
+    <!-- ==footer == -->
+    <footer>
+        <div class="social-web">
+            <a href="https://www.instagram.com/iliauni/" target="_blank">
+                <img src="images/instagram.svg" alt="">
+            </a>
+            <div class="facebook">
+                <a href="https://www.facebook.com/interactivelibraryiliauni/" target="_blank">
+                    <img src="images/facebook.svg" alt="facebook">
+                    გვერდი
+                </a>
+                <a href="https://www.facebook.com/groups/310885287307354/" target="_blank">
+                    <img src="images/facebook.svg" alt="facebook">
+                    სამუშაო ჯგუფი
+                </a>
+            </div>
+        </div>
+        <div class="links">
+            <a href="https://animachatbotics.com/" target="_blank">
+                <img src="images/anima.svg" alt="anima">
+            </a>
+            <a href="https://iliauni.edu.ge/ge/" target="_blank">
+                <img src="images/ilia.svg" alt="ilia-logo">
+            </a>
+        </div>
+    </footer>
+
+    <!-- scripts -->
+    <script src="js/library.js"></script>
+    <script src="js/main.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+
+
+    <script type="text/javascript">
+
+        // ილიანის ჩეთბოტების სიის წამოღება
+
+        var settings = {
+          "url": "https://animachatbotics.com/ka/Home/IliauniChatbots",
+          "method": "GET",
+          "timeout": 0,
+        };
+
+        $.ajax(settings)
+        .done(function (response) {
+
+          var data = response.Data;
+
+          for (const chatbot of data) {
+
+              var chatbot_item = '<a href="'+ chatbot.Url +'" class="book">'+
+                    '<img src="'+ chatbot.Image +'" alt="background">' +
+                    '<img src="images/sign.svg" alt="sign" id="sign">' +
+                    '<h6>'+ chatbot.Name +'</h6></a>'
+
+              if(!chatbot.isWinner){
+                 chatbot_item = chatbot_item.replace('<img src="images/sign.svg" alt="sign" id="sign">','');
+              }
+
+
+             $(".book-wrapper").append(chatbot_item);
+
+
+            
+          }
+
+
+
+          $("body").show();
+
+        })
+        .fail(function (response) {
+           window.location.href = "https://iel.iliauni.edu.ge/";
+        });
+
+
+
+	</script>
+
+
+
 </body>
 </html>
